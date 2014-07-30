@@ -1,0 +1,48 @@
+.type-icon{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+ul.parent-buttons li{
+	padding: 0 10px;
+}
+
+ul.parent-buttons li a{
+	font-family: 2.5em;
+	letter-spacing: 3px;
+	color: #404040;
+	background-color: #fff;
+}
+
+
+
+.parent-buttons> li.active > a, .parent-buttons > li.active > a:hover, .parent-buttons > li.active > a:focus{
+	color: #fff;
+	background-color: #DDDDDD;
+}
+
+
+
+
+ul.sub-buttons li a{
+	background-color: #fff;
+	color: #404040;
+	border: 2px solid #fff;
+	padding: 1px;
+}
+
+
+ul.sub-buttons li a:hover{
+	background-color: #fff;
+	color: #63b258;
+}
+
+
+.sub-buttons > li.active > a, .sub-buttons > li.active > a:hover, .sub-buttons > li.active > a:focus{
+	border-bottom: 2px dashed #ededed;
+	background-color: #fff;
+	color: #63b258;
+
+}
+

@@ -1,0 +1,49 @@
+<div class="modal-content">
+	<div class="modal-header">
+		<button type="button" class="close" ng-click="close()" aria-hidden="true">&times;</button>
+		<div class="modal-title" id="myModalLabel">
+			<img src="..img/tap.png" width="50" alt="">Tap {{ profile.name }} for a job
+		</div>
+		<div class="modal-sub-title" ng-click="send()">Tapping a student send an email to him or her about your job.<br>Let them know they've impressed you.</div>
+	</div>
+
+	<div class="modal-body" style="color: #000;">
+		<form ng-submit="mail()">
+
+			<div class="mc-field-group">
+				<label for="mce-FNAME">Your name
+				</label>
+				<input type="text" value="" placeholder="" name="FNAME" class="turtle required" id="fname" ng-model="email.name">
+			</div>
+			<div class="mc-field-group">
+				<label for="mce-LNAME">Your Title at Company
+				</label>
+				<input type="text" value="" placeholder="" name="title" class="turtle required" id="title" ng-model="email.title">
+			</div>
+			<div class="mc-field-group">
+				<label for="mce-EMAIL">LinkedIn Profile or Company Website
+				</label>
+				<input type="text" value="" placeholder="" name="website" class="turtle required" id="website" ng-model="email.website">
+			</div>
+			<div class="mc-field-group">
+				<label for="mce-MMERGE4">Link to specific job post 
+				</label>
+				<input type="link" value="" placeholder="You should have received a link via email to your job post" name="job-post" class="turtle required" id="job-post" ng-model="email.job">
+			</div>
+			<div class="mc-field-group">
+				<label for="mce-MMERGE8">Add a message
+				</label>
+				<input type="text" name="message" placeholder="Why do you want them to work for you?" class="turtle required" value="" id="message" ng-model="email.message">
+			</div>
+			<div class="mc-field-group">
+				<label for="mce-EMAIL">How can this student contact you?
+				</label>
+				<input type="text" value="" placeholder="add phone number or email" name="contact" class="turtle" id="contact" ng-model="email.contact">
+			</div>
+
+			<input type="submit" value="Send" name="subscribe" id="mc-embedded-subscribe" style="width: 20%; text-align:center;" class="button" ng-click="send()">
+		</form>
+	</div>
+
+
+</div>

@@ -1,0 +1,41 @@
+
+<div class="job-template col-xs-12">
+  <div class="top-bar-post"></div>
+  <div class="template-top">
+    <h1 style="text-align:left; padding-bottom:10px;"><a href="{{ data.website }}">{{ data.company }}</a></h1>
+    <h2><img src="../img/pinpointwhite.png" width="20" style="padding: 0 5px 0 5px;" alt="">{{ data.location }}</h2>
+  </div>
+
+    <div class="template-bottom">
+      <div class="short-description">
+        {{ data.description }}
+      </div>
+      <ul class="logistics">
+        <li><img src="../img/wrench.png" width="20" style="padding-right: 5px;" alt="">{{ data.skill }}</li>
+        <li><img src="../img/timeframe.png" width="20" style="padding-right: 5px;" alt="">{{ data.time }}</li>
+      </ul>
+      <ul class="logistics">
+        <li><img src="../img/calendarstart.png" width="17" style="padding-right: 5px;" alt="">{{ data.start }}</li>
+        <li><img src="../img/calendarend.png" width="17" style="padding-right: 5px;" > {{ data.end }}</li>
+      </ul>
+      
+      <ul class="logistics">
+        <li><img src="../img/dollarsign.png" width="14" style="padding-right: 5px;" alt="">{{ data.compensation }}</li>
+        <li>&#8594;   {{ data.payment }}</li>
+      </ul>
+      <div class="long-description">
+        "{{ data.explanation }}"
+      </div>
+
+      <div class="divider"></div>
+
+      <span ng-show="!admin">
+        <button type="button" class="btn round-green-btn" style="margin-bottom: 10px;" ng-click="apply()">Apply</button>
+      </span>
+      <span ng-show="admin">
+        <button type="button" class="apply-btn btn btn-default" ng-click="approve()">Approve</button>
+        <button type="button" class="apply-btn btn btn-default" ng-click="reject()">Reject</button>
+      </span>
+
+  </div>
+</div>

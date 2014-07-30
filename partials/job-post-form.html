@@ -1,0 +1,184 @@
+<head>
+  
+  <link rel="stylesheet" href="../css/animate.css">
+  <script src="../js/jquery-2.0.0.js"></script>
+  <script src="../js/wow.min.js"></script>
+  <script>
+   new WOW().init();
+  </script>
+
+</head>
+
+<section class="post" id="post">
+<div class="container">
+    <div class="row">
+        <h1 style="text-align:left;">Welcome {{ user.name }}! Post A Job <a href="http://opencampusjobs.com/app.html#/logout" style="color: #807f80;"><button class="btn btn-sm round-gold-btn pull-right">Log Out</button></a><a href="http://opencampusjobs.com/app.html#/students" style="color: #807f80;"><button class="btn btn-sm round-green-btn pull-right">See OC Student Professionals</button></a>
+    </h1>
+    <hr>
+    </div>
+
+    <div class="row ">
+        <form class="form-horizontal" role="form" ng-submit="addJob()">
+
+        <div class="col-xs-12 col-sm-9" style="border-right: 2px dashed #ededed;">
+
+        <div class="row">    
+            <div class="col-sm-12" style="text-align:center;">
+                <h1 class="wow fadeIn">What are you looking for?</h1>
+                    <label><input type="radio" value="Designer" name="skill-category" ng-model="job.skill"><div class="wow fadeInLeft btn post-skill-btn"><h2 style="margin-top:37px;">Designer</h2></div></label>
+                    <label><input type="radio" value="Photographer/Film Maker" name="skill-category" ng-model="job.skill"><div class="wow fadeInLeft btn post-skill-btn"><h2 style="margin-top:30px;">Photographer<br>Film Maker</h2></div></label>
+                    <label><input type="radio" value="Developer" name="skill-category" ng-model="job.skill"><div class="wow fadeInLeft btn post-skill-btn"><h2 style="margin-top:37px;">Developer</h2></div></label>
+                    <label><input type="radio" value="Social Media" name="skill-category" ng-model="job.skill"><div class="wow fadeInLeft btn post-skill-btn"><h2 style="margin-top:30px;">Social<br>Media</h2></div></label>
+                    <label><input type="radio" value="Engineer" name="skill-category" ng-model="job.skill"><div class="wow fadeInLeft btn post-skill-btn"><h2 style="margin-top:37px;">Engineer</h2></div></label>
+
+
+            </div>
+            <div class="col-xs-12" style="text-align:center;">
+                    <label><input type="radio" value="Finance Guru" name="skill-category" ng-model="job.skill"><div class="wow fadeInRight btn post-skill-btn"><h2 style="margin-top:30px;">Finance<br>Guru</h2></div></label>
+                    <label><input type="radio" value="Writing" name="skill-category" ng-model="job.skill"><div class="wow fadeInRight btn post-skill-btn"><h2 style="margin-top:30px;">Writer<br>Blogger</h2></div></label>
+                    <label><input type="radio" value="Performer" name="skill-category" ng-model="job.skill"><div class="wow fadeInRight btn post-skill-btn"><h2 style="margin-top:37px;">Performer</h2></div></label>
+                    <label><input type="radio" value="Sales / Business Strategist" name="skill-category" ng-model="job.skill"><div class="wow fadeInRight btn post-skill-btn"><h2 style="margin-top:30px;" >Sales / Business<br>Strategist</h2></div></label>
+                    <label><input type="radio" value="Tutor" name="skill-category" ng-model="job.skill"><div class="wow fadeInRight btn post-skill-btn"><h2 style="margin-top:37px;">Tutor</h2></div></label>
+                    <label><input type="radio" value="Student Professional" name="skill-category" ng-model="job.skill"><div class="wow fadeInRight btn post-skill-btn"><h2 style="margin-top:10px;"><img src="../img/graduates.png" width="25" alt=""><br>Student<br>Professional</h2></div></label>
+                    <br>
+                    <h2 style="font-size: 12px;">*Select <img src="../img/graduates.png" width="25" alt="">  Student Professional if you want an overall A+, high quality student without a preferred skill set.  <br>Good choice if you need a personal assistant, au pair, or right-hand [wo]man.</h2>
+                    
+            </div>
+        </div>
+            
+        <div class="row home-page-row">
+            <h1 class="wow fadeIn">Describe your job in one sentence</h1>
+            <div class="col-xs-12 col-md-6 col-md-offset-3 wow fadeInLeft">
+                <input type="text" class="post-form-field" style="width=100%; font-size: 1.5em;" value="" name="short-description" placeholder="What exactly do you need?" ng-model="job.description">
+            </div>
+        </div>
+
+        <div class="row home-page-row time-frame-select">
+            <div class="col-xs-12" style="text-align:center;">
+                <h1 class="wow fadeIn">What is the type and time frame of the job?</h1>
+                <div class="col-xs-4 wow fadeInLeft">
+                    <label><input type="radio" value="Gig" data-target=".enter-time-gig" name="time-frame-gig" ng-model="job.time"><div class="post-time-icon"><img src="../img/calendar-01.png" class="img-responsive type-icon" width="200" alt=""><br><h2>GIG</h2></div></label>
+                    <br>
+                    <!--start/end date for gig-->
+                    <div class="enter-time-gig" ng-show="job.time == 'Gig'">
+                        <label for="start-date" class="col-xs-1 col-sm-2 control-label"><img src="../img/calendarstart.png" width="20" class="calendar-icon" alt=""></label>
+                        <div class="col-xs-11 col-sm-10">
+                            <input type="text" class="post-form-field" placeholder="Start Date" value="" name="start-date" id="start-date" class="turtle" ng-model="job.start">
+                        </div> 
+                        <br>
+                        <label for="end-date" class="col-xs-1 col-sm-2 control-label"><img src="../img/calendarend.png" class="calendar-icon"width="20"  alt=""></label>
+                        <div class="col-xs-11 col-sm-10">
+                            <input type="text"  class="post-form-field" placeholder="End Date" value="" name="end-date" id="end-date" class="turtle" ng-model="job.end">
+                        </div>
+                    </div>
+                    <!--xxxx-->
+                </div>
+                <div class="col-xs-4 wow fadeInUp">
+                    <label><input type="radio" data-target=".enter-time-sprint" value="Sprint" name="time-frame-sprint" ng-model="job.time"><div class="post-time-icon"><img src="../img/calendar-03.png" class="img-responsive type-icon post-time-icon" width="200" alt=""><br><h2>SPRINT</h2></div></label>
+                    <br>
+                    <!--start/end date for sprint-->
+                    <div class="enter-time-sprint target" ng-show="job.time == 'Sprint'">
+                        <label for="start-date" class="col-xs-1 col-sm-2 control-label"><img src="../img/calendarstart.png" width="20"  alt=""></label>
+                        <div class="col-xs-11 col-sm-10">
+                            <input type="text" class="post-form-field" placeholder="Start Date" value="" name="start-date" id="start-date" class="turtle" ng-model="job.start">
+                        </div> 
+                        <br>
+                        <label for="end-date" class="col-xs-1 col-sm-2 control-label"><img src="../img/calendarend.png" width="20"  alt=""></label>
+                        <div class="col-xs-11 col-sm-10">
+                            <input type="text"  class="post-form-field" placeholder="End Date" value="" name="end-date" id="end-date" class="turtle" ng-model="job.end">
+                            <br>
+                        </div>
+                    </div>
+                    <!--xxxx-->
+                </div>
+                <div class="col-xs-4 wow fadeInRight">
+                    <label><input type="radio" data-target=".enter-time-project" value="Project" name="time-frame-project"  ng-model="job.time"><div class="post-time-icon"><img src="../img/calendar-02.png" class="img-responsive type-icon post-time-icon" width="200" alt=""><br><h2>PROJECT</h2></div></label>
+                    <br>
+                    <!--start/end date for gig-->
+                    <div class="enter-time-project target"  ng-show="job.time == 'Project'">
+                        <label for="start-date" class="col-xs-1 col-sm-2 control-label"><img src="../img/calendarstart.png" width="20"  alt=""></label>
+                        <div class="col-xs-11 col-sm-10">
+                            <input type="text" class="post-form-field" placeholder="Start Date" value="" name="start-date" id="start-date" class="turtle" ng-model="job.start">
+                        </div> 
+                        <br>
+                        <label for="end-date" class="col-xs-1 col-sm-2 control-label"><img src="../img/calendarend.png" width="20"  alt=""></label>
+                        <div class="col-xs-11 col-sm-10">
+                            <input type="text"  class="post-form-field" placeholder="End Date" value="" name="end-date" id="end-date" class="turtle" ng-model="job.end">
+                        </div>
+                    </div>
+                    <!--xxxx-->
+                </div>
+            </div>
+        </div>
+        
+        <div class="row home-page-row">
+            <h1 class="wow fadeIn">Tell us a little bit more about your job</h1>
+            <div class="col-xs-12 col-md-6 col-md-offset-3 wow fadeInRight">
+                <textarea type="text" rows="4" class="post-form-field" style="width: 100%; border: 1px dashed #63b258;" placeholder="Explain your job as if we're talking face-to-face. It is important to include information about your company, what exactly you need the Student Professional to accomplish, goals and expectations." value="" name="long-description" ng-model="job.explanation"></textarea>
+            </div>
+        </div>
+
+
+        <div class="row home-page-row">
+            <h1 class="wow fadeIn">Details, Details, Details</h1>
+            <div class="col-xs-12 col-md-4">
+                <label for="company-name" class="col-xs-1 col-sm-2 control-label"><img src="../img/company.png" width="30"  alt=""></label>
+                <div class="col-xs-11 col-sm-10 wow fadeInLeft">
+                    <input type="text" class="post-form-field" value="" name="company-name" id="company-name" placeholder="Personal or Company Name" ng-model="job.company">
+                </div>   
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <label for="company-location" class="col-xs-1 col-sm-2 control-label"><img src="../img/pinpoint.png" width="15"  alt=""></label>
+                <div class="col-xs-11 col-sm-10 wow fadeInLeft">
+                    <input type="text" value="" class="post-form-field" name="company-location" id="company-location" placeholder="Address, City, State" ng-model="job.location">
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <label for="website" class="col-xs-1 col-sm-2 control-label"><img src="../img/link.png" width="25"  alt=""></label>
+                <div class="col-xs-11 col-sm-10  wow fadeInRight">
+                    <input type="url" value="" class="post-form-field" name="website" placeholder="Link to Website" ng-model="job.website">
+                </div>
+            </div>
+        </div>
+
+        <div class="row home-page-row">
+
+            <div class="col-xs-12 col-md-4">
+                <label for="job-posters-email" class="col-xs-1 col-sm-2 control-label"><img src="../img/email.png" width="25"  alt=""></label>
+                <div class="col-xs-11 col-sm-10  wow fadeInRight">
+                    <input type="email" value="" class="post-form-field" id="job-posters-email" placeholder="Email" name="job-posters-email" class="turtle" ng-model="job.email">
+                </div>
+            </div> 
+            
+            <div class="col-xs-12 col-md-4">
+                <label for="compensation" class="col-xs-1 col-sm-2 control-label"><img src="../img/dollarsign.png" width="20"  alt=""></label>
+                <div class="col-xs-11 col-sm-10  wow fadeInRight">
+                    <input type="text" class="post-form-field" value="" placeholder="Compensation" name="compensation" id="compensation" class="turtle" ng-model="job.compensation">
+                </div>
+            </div>
+            <div class="col-xs-12 col-md-4">
+                <label for="payment-type" class="col-xs-1 col-sm-2 control-label"><img src="../img/handshake.png" width="20"  alt=""></label>
+                <div class="col-xs-11 col-sm-10  wow fadeInRight">
+                    <select class="form-control post-form-field" id="payment-type" ng-model="job.payment">
+                      <option>Up Front</option>
+                      <option>Installments</option>
+                      <option>Upon Completion</option>
+                      <option>Volunteer Opportunity</option>
+                  </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="row home-page-row">
+            <!-- submitting sends email to inputted email address-->
+            <input type="submit" value="Post" name="post-a-job" class="btn round-green-btn" ng-click="addJob()">
+        </div>
+    </form>
+    </div>
+
+    <div class="col-xs-12 col-sm-3" id="job">
+        <job data="job"></job>
+    </div>
+
+    </div>
+</div>

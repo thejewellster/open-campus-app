@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+  <meta charset="utf-8">
+  <title>My AngularJS App</title>
+  <link rel="stylesheet" href="css/bootstrap.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="css/animate.css">
+  <script src="js/jquery-2.0.0.js"></script>
+  <script src="js/waypoints.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/wow.min.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Cedarville+Cursive' rel='stylesheet' type='text/css'>
+  <script>
+   new WOW().init();
+  </script>
+
+</head>
+
+<body ng-cloak>
+
+<!-- navigation -->
+<section class="home-app">
+<div class="container-fluid">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          
+           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://opencampusjobs.com"><img src="img/LongLogoWhite.png" width="200" class="quad-logo img-responsive" alt=""></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav pull-right">
+          <li><a href="index.html">HOME</a></li>
+            <li><a href="app.html#/password" class="navbar-login" style="border-right:0;"><img src="img/briefcasewhite.png" width="20" style="padding-right: 5px; padding-bottom:3px;" alt="">BUSINESSES</a></li>
+            <li><a href="app.html#/login" class="navbar-login" style="border-right:0;"><img src="img/white-grad-cap.png" width="30" style="padding-right: 5px;"alt="">STUDENTS</a></li>
+          </ul>
+
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
+</div>
+</section>
+
+
+<!-- end navigation -->
+
+<div class="container">
+  
+  <div ng-view></div>
+  </div>
+
+
+
+
+
+<!-- footer -->
+<footer>
+    <div class="container-fluid footer-bar">
+        <div class="row">
+          <ul class="footer-links">
+              <li><a href="team.html">The Team</a></li>
+              <li><a href="press.html">Press</a></li>
+              <li><a href="term-and-conditions.html">Terms & Conditions</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+    </div>
+</footer>
+
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+  <script src="https://cdn.firebase.com/v0/firebase.js"></script>
+  <script src="https://cdn.firebase.com/v0/firebase-simple-login.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints-sticky.min.js"></script>
+  <script src="http://api.webshell.io/sdk/js?key=177e5f601d1826f250ebae3c31f388ec"></script>
+  <script src="js/ui-bootstrap-tpls-0.11.0.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/directives.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/routes.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/service.login.js"></script>
+  <script src="js/service.firebase.js"></script>
+  <script src="js/service.changeEmail.js"></script>
+  <script src="js/module.simpleLoginTools.js"></script>
+  <script src="js/module.routeSecurity.js"></script>
+</body>
+</html>

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html><!-- InstanceBegin template="/Templates/searchfeature.dwt" codeOutsideHTMLIsLocked="false" -->
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css" media="screen" type="text/css" />
+    <script src="js/jquery-2.0.0.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/jobs.js"></script>
+    <script src="js/students.js"></script>
+    <script src="js/template.js"></script>
+    <!-- InstanceBeginEditable name="head" -->
+    <!-- InstanceEndEditable -->
+</head>
+
+
+
+<section class="home">
+<div class="container-fluid">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          
+           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="http://opencampusjobs.com"><img src="img/LongLogoWhite.png" width="200" class="quad-logo img-responsive" alt=""></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav pull-right">
+          <li><a href="index.html">HOME</a></li>
+            <li><a href="jobs.html">JOBS</a></li>
+            <li><a href="post.html">POST</a></li>
+            <li><a href="http://opencampusjobs.com/app.html#/students" style="border-right:0;">PINPOINT</a></li>
+            <li><a href="http://opencampusjobs.com/app.html#/login" class="navbar-login" style="border-right:0;"><img src="img/white-grad-cap.png" width="30" style="padding-right: 5px;"alt="">STUDENTS</a></li>
+            
+          </ul>
+
+        </div><!-- /.navbar-collapse -->
+
+        <div class="hidden-sm">
+            <div class="container hidden-xs" style="margin-top: 100px;">
+                <div class="row">
+                    <div class="intro-header-sentence animated fadeIn">Jobs are categorized by timeframe, skill, and location.<br> Click "Apply" and we send your profile to the poster.  Easy.</div>
+                </div>
+                <div class="row" style="margin-top: 50px;">
+                    <div class="col-sm-4">
+                        <img src="img/clock.png" style="margin: 0 auto;" class="img-responsive animated fadeInLeft" width="150" alt="">
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="img/skillcircle.png" style="margin: 0 auto;" class="img-responsive animated fadeInUp" width="185" alt="">
+                    </div>
+                    <div class="col-sm-4">
+                        <img src="img/pinpointsaratoga.png" style="margin: 0 auto;" class="img-responsive animated fadeInUp" width="150" alt="">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+      </div><!-- /.container-fluid -->
+    </nav>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+<!--body-->
+<body>
+<!-- InstanceBeginEditable name="page-content" -->
+<section class="major-section jobs" style="margin-top: 50px;" id="jobs">
+    <div class="container">
+    <div class="row">
+    <div class="col-xs-12">
+
+    <div class="tabbable">
+        <ul class="parent-buttons nav nav-pills nav-justified"><!--capital region parent tab-->
+            <li><a href="#gigs" data-toggle="tab"><img src="img/calendar-01.png" class="img-responsive type-icon" width="104" alt=""><br>GIGS</a></li>
+            <li><a href="#sprints" data-toggle="tab"><img src="img/calendar-03.png" class="img-responsive type-icon" width="100" alt=""><br>SPRINTS</a></li>
+            <li><a href="#projects" data-toggle="tab"><img src="img/calendar-02.png" class="img-responsive type-icon" width="104" alt=""><br>PROJECTS</a></li>
+        </ul>
+        <br>
+        <div class="tab-content"><!--all tab content-->
+            <div class="tab-pane fade" id="gigs"><!--gigs child tab-->
+                <ul class="sub-buttons nav nav-pills nav-justified">
+                    <li class="active"><a href="#gig-all" data-toggle="tab">all gigs</a></li>
+                    <li><a href="#gig-business" data-toggle="tab">business</a></li>
+                    <li><a href="#gig-design" data-toggle="tab">design</a></li>
+                    <li><a href="#gig-engineering" data-toggle="tab">engineering</a></li>
+                    <li><a href="#gig-media-arts" data-toggle="tab">digital media arts</a></li>
+                    <li><a href="#gig-performing-arts" data-toggle="tab">performing arts</a></li>
+                    <li><a href="#gig-research" data-toggle="tab">research</a></li>
+                    <li><a href="#gig-technical" data-toggle="tab">technical</a></li>
+                    <li><a href="#gig-writing" data-toggle="tab">writing</a></li>
+                </ul>
+
+                <div class="tab-content" style="margin-top: 50px;"><!--gig skill content-->
+                    <div class="tab-pane fade in active" id="gig-all">
+                        <script>
+                        $("#gig-all").load("jobs/gigs/all-gigs.html");
+                        </script>         
+                    </div>
+                    <div class="tab-pane fade" id="gig-business">
+                        <h2>No business gigs yet, <a href="post.html" style="text-decoration: none; color: #76cc6c">post one!</a></h2>
+                    </div>
+                    <div class="tab-pane fade" id="gig-design">
+                        <script>
+                        $("#gig-design").load("jobs/gigs/gigs-design.html");
+                        </script> 
+                    </div>
+                    <div class="tab-pane fade" id="gig-engineering">
+                        <h2>No engineering gigs yet, <a href="post.html" style="text-decoration: none; color: #76cc6c">post one!</a></h2>
+                    </div>
+                    <div class="tab-pane fade" id="gig-media-arts">
+                        <script>
+                        $("#gig-media-arts").load("jobs/gigs/gig-media-arts.html");
+                        </script> 
+                    </div>
+                    <div class="tab-pane fade" id="gig-performing-arts">
+                        <script>
+                        $("#gig-performing-arts").load("jobs/gigs/gigs-performing-arts.html");
+                        </script> 
+                    </div>
+                    <div class="tab-pane fade" id="gig-research">
+                        <h2>No research gigs yet, <a href="post.html" style="text-decoration: none; color: #76cc6c">post one!</a></h2>
+                    </div>
+                    <div class="tab-pane fade" id="gig-technical">
+                        <h2>No technical gigs yet, <a href="post.html" style="text-decoration: none; color: #76cc6c">post one!</a></h2>
+                    </div>
+                    <div class="tab-pane fade" id="gig-writing">
+                        <script>
+                        $("#gig-writing").load("jobs/gigs/gigs-writing.html");
+                        </script>
+                    </div>
+                </div><!-- end gig skill content-->
+            </div><!--end gig section-->
+
+
+
+            <div class="tab-pane" id="sprints"><!--sprints child tab-->
+                <ul class="sub-buttons nav nav-pills nav-justified">
+                    <li class="active"><a href="#all-sprints" data-toggle="tab">all sprints</a></li>
+                    <li><a href="#sprints-business" data-toggle="tab">business</a></li>
+                    <li><a href="#sprints-design"> design</a></li>
+                    <li><a href="#sprints-engineering" data-togg le="tab">engineering</a></li>
+                    <li><a href="#sprints-media-arts" data-toggle="tab">digital media arts</a></li>
+                    <li><a href="#sprints-performing-arts" data-toggle="tab">performing arts</a></li>
+                    <li><a href="#sprints-research" data-toggle="tab">research</a></li>
+                    <li><a href="#sprints-sales-marketing" data-toggle="tab">sales &amp; marketing</a></li>
+                    <li><a href="#sprints-technical" data-toggle="tab">technical</a></li>
+                    <li><a href="#sprints-writing" data-toggle="tab">writing</a></li>
+                </ul>
+
+                <div class="tab-content" style="margin-top: 50px;"><!--gig skill content-->
+                    <div class="tab-pane fade in active" id="all-sprints">
+                        <script>
+                        $("#all-sprints").load("jobs/sprints/all-sprints.html");
+                        </script>
+                    </div>
+                    <div class="tab-pane fade" id="sprints-business">
+                        <h2>No business sprints yet, <a href="post.html" style="text-decoration: none; color: #76cc6c">post one!</a></h2>
+                    </div>
+                    <div class="tab-pane fade" id="sprints-design">
+                        <script>
+                        $("#sprints-design").load("jobs/sprints/sprints-design.html");
+                        </script>
+                  
+                    </div>
+                    <div class="tab-pane fade" id="sprints-engineering">
+                        <h2>No engineering sprints yet, <a href="post.html" style="text-decoration: none; color: #76cc6c">post one!</a></h2>
+                    </div>
+                    <div class="tab-pane fade" id="sprints-media-arts">
+                        <script>
+                        $("#sprints-media-arts").load("jobs/sprints/sprints-media-arts.html");
+                        </script>
+
+                    </div>
+                    <div class="tab-pane fade" id="sprints-performing-arts">
+                        <h2>No performing arts sprints yet, <a href="post.html" style="text-decoration: none; color: #76cc6c">post one!</a></h2>
+                    </div>
+                    <div class="tab-pane fade" id="sprints-research">
+                        <h2>No research sprints yet, <a href="post.html" style="text-decoration: none; color: #76cc6c">post one!</a></h2>
+                    </div>
+                    <div class="tab-pane fade" id="sprints-sales-marketing">
+                        <script>
+                        $("#sprints-sales-marketing").load("jobs/sprints/sprints-sales-marketing.html");
+                        </script>
+                    </div>
+                    <div class="tab-pane fade" id="sprints-technical">
+                        <h2>No technical sprints yet, <a href="post.html" style="text-decoration: none; color: #76cc6c">post one!</a></h2>
+                    </div>
+                    <div class="tab-pane fade" id="sprints-writing">
+                        <h2>No writing sprints yet, <a href="post.html" style="text-decoration: none; color: #76cc6c">post one!</a></h2>
+                    </div>
+                </div><!-- end sprints skill content-->
+            </div><!--end sprints section-->
+
+            <div class="tab-pane" id="projects"><!--sprints child tab-->
+                <ul class="sub-buttons nav nav-pills nav-justified">
+                    <li class="active"><a href="#projects-all" data-toggle="tab">all projects</a></li>
+                    <li><a href="#projects-business" data-toggle="tab">business</a></li>
+                    <li><a href="#projects-design" data-toggle="tab">design</a></li>
+                    <li><a href="#projects-engineering" data-toggle="tab">engineering</a></li>
+                    <li><a href="#projects-media-arts" data-toggle="tab">digital media arts</a></li>
+                    <li><a href="#projects-performing-arts" data-toggle="tab">performing arts</a></li>
+                    <li><a href="#projects-research" data-toggle="tab">research</a></li>
+                    <li><a href="#projects-technical" data-toggle="tab">technical</a></li>
+                    <li><a href="#projects-writing" data-toggle="tab">writing</a></li>
+                </ul>
+
+                <div class="tab-content" style="margin-top: 50px;"><!--gig skill content-->
+                    <div class="tab-pane fade in active" id="projects-all">
+                        <script>
+                        $("#projects-all").load("jobs/projects/all-projects.html");
+                        </script>
+                    </div>
+                    <div class="tab-pane fade" id="projects-business">
+                        <script>
+                        $("#projects-business").load("jobs/projects/projects-business.html");
+                        </script>
+                            
+                    </div>
+                    <div class="tab-pane fade" id="projects-design">
+                        <script>
+                        $("#projects-design").load("jobs/projects/projects-design.html");
+                        </script> 
+                    </div>
+                    <div class="tab-pane fade" id="projects-engineering">
+                        <h2>No engineering projects yet, <a href="post.html" style="text-decoration: none; color: #76cc6c">post one!</a></h2>
+                    </div>
+                    <div class="tab-pane fade" id="projects-media-arts">
+                        <h2>No digital media arts projects yet, <a href="post.html" style="text-decoration: none; color: #76cc6c">post one!</a></h2>
+                    </div>
+                    <div class="tab-pane fade" id="projects-performing-arts">
+                        <h2>No performing arts projects yet, <a href="post.html" style="text-decoration: none; color: #76cc6c">post one!</a></h2>
+                    </div>
+                    <div class="tab-pane fade" id="projects-research">
+                        <h2>No research projects yet, <a href="post.html" style="text-decoration: none; color: #76cc6c">post one!</a></h2>
+                    </div>
+                    <div class="tab-pane fade" id="projects-technical">
+                        <script>
+                        $("#projects-technical").load("jobs/projects/projects-technical.html");
+                        </script>
+                    </div>
+                    <div class="tab-pane fade" id="projects-writing">
+                        <script>
+                            $("#projects-writing").load("jobs/projects/projects-writing.html");
+                        </script> 
+                    </div>
+                </div><!-- end project skill content-->
+            </div><!--end sprints section-->
+        </div><!-- end tab content-->
+    </div><!--end tabbable-->
+
+</div>
+</div>
+</div>
+</section>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51288080-1', 'opencampusjobs.com');
+  ga('send', 'pageview');
+
+</script>
+<!-- InstanceEndEditable -->
+</body>
+<footer>
+    <div class="container-fluid footer-bar">
+        <div class="row">
+          <ul class="footer-links">
+              <li><a href="team.html">The Team</a></li>
+              <li><a href="team.html">Press</a></li>
+              <li><a href="term-and-conditions.html">Terms & Conditions</a></li>
+              <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+    </div>
+</footer>
+
+<!-- InstanceEnd --></html>

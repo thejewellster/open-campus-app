@@ -1,0 +1,435 @@
+
+
+<div class="container">
+  <div class="row">
+
+
+        <div class="alert alert-success" ng-show="sent">Tap sent!</div>
+        
+        
+        <h1>Pinpoint A Student <a href="http://opencampusjobs.com/app.html#/logout" style="color: #807f80;"><button class="btn btn-sm round-gold-btn pull-right">Log Out</button></a>
+        <a href="http://opencampusjobs.com/app.html#/post" style="color: #807f80;"><button class="btn btn-sm round-green-btn pull-right">Post A Job</button></a></h1>
+
+        <br>
+      <div class="col-xs-12 col-sm-4">
+        <img src="../img/graduates.png" width="25" alt="">
+          <div class="btn-group" style="width:90%;">
+              <select class="btn btn-profile-dropdown" id="dropdown-list" role="menu" ng-model="schoolFilter">
+                <option value="">All Schools</option>
+                <option>Alfred University</option>
+                <option>Albany College of Pharmacy and Health Sciences</option>
+                <option>Albany Law School</option>
+                <option>Albany Medical College</option>
+                <option>Albertus Magnus College</option>
+                <option>Albright College</option>
+                <option>Alfred University</option>
+                <option>Alvernia College</option>
+                <option>Amherst College</option>
+                <option>Andover Newton Theological School </option>
+                <option>Antioch University-New England</option>
+                <option>Assumption College </option>
+                <option>Atlantic Union College </option>
+                <option>Bank Street College of Education</option>
+                <option>Bard College</option>
+                <option>Bard College at Simon's Rock </option>
+                <option>Barnard College</option>
+                <option>Bates College</option>
+                <option>Bay Path College </option>
+                <option>Beal College</option>
+                <option>Becker College </option>
+                <option>Benjamin Franklin Institute of Technology </option>
+                <option>Bennington College</option>
+                <option>Bentley University </option>
+                <option>Berkeley College</option>
+                <option>Berklee College of Music </option>
+                <option>Bernard M Baruch College, CUNY</option>
+                <option>Binghamton University, State University of New York</option>
+                <option>Bloomsburg University of Pennsylvania</option>
+                <option>Boricua College</option>
+                <option>Boston Architectural College </option>
+                <option>Boston College </option>
+                <option>Boston University </option>
+                <option>Bowdoin College</option>
+                <option>Brandeis University </option>
+                <option>Briarcliffe College</option>
+                <option>Bridgewater State College </option>
+                <option>Brooklyn College</option>
+                <option>Brooklyn Law School</option>
+                <option>Brown University</option>
+                <option>Bryant University</option>
+                <option>Bryn Athyn College of the New Church</option>
+                <option>Bryn Mawr College</option>
+                <option>Bucknell University</option>
+                <option>Buffalo State College</option>
+                <option>Burlington College</option>
+                <option>California University of Pennsylvania</option>
+                <option>Cambridge College </option>
+                <option>Canisius College</option>
+                <option>Carlow College</option>
+                <option>Castleton State College</option>
+                <option>Cazenovia College</option>
+                <option>Cedar Crest College</option>
+                <option>Central Connecticut State University</option>
+                <option>Champlain College</option>
+                <option>Charter Oak State College</option>
+                <option>Chatham College</option>
+                <option>Chestnut Hill College</option>
+                <option>Clarion University of Pennsylvania</option>
+                <option>Clark University </option>
+                <option>Clarkson University</option>
+                <option>Colby College</option>
+                <option>Colby-Sawyer College</option>
+                <option>Colgate University</option>
+                <option>College of Mount Saint Vincent</option>
+                <option>College of St. Joseph</option>
+                <option>College of Staten Island</option>
+                <option>College of the Atlantic</option>
+                <option>College of the Holy Cross </option>
+                <option>Columbia University</option>
+                <option>Concordia College-New York</option>
+                <option>Connecticut College</option>
+                <option>Cornell University</option>
+                <option>CUNY School of Law</option>
+                <option>D'Youville College</option>
+                <option>Daemen College</option>
+                <option>Dartmouth College</option>
+                <option>Davis College</option>
+                <option>De Sales University</option>
+                <option>Dean College </option>
+                <option>Delaware Valley College of Science and Agriculture</option>
+                <option>Dickinson College</option>
+                <option>Drexel University</option>
+                <option>Eastern Connecticut State University</option>
+                <option>Eastern Nazarene College </option>
+                <option>Elmira College</option>
+                <option>Elms College </option>
+                <option>Emerson College </option>
+                <option>Emmanuel College </option>
+                <option>Endicott College </option>
+                <option>Episcopal Divinity School </option>
+                <option>Fairfield University</option>
+                <option>Farmingdale State College</option>
+                <option>Fashion Institute of Technology</option>
+                <option>Fisher College </option>
+                <option>Fitchburg State University </option>
+                <option>Fordham University</option>
+                <option>Framingham State College </option>
+                <option>Franklin & Marshall College</option>
+                <option>Franklin Pierce University</option>
+                <option>Franklin W. Olin College of Engineering </option>
+                <option>Gannon University</option>
+                <option>Goddard College</option>
+                <option>Goodwin College</option>
+                <option>Gordon College </option>
+                <option>Granite State College</option>
+                <option>Green Mountain College</option>
+                <option>Grove City College</option>
+                <option>Gwynedd-Mercy College</option>
+                <option>Hamilton College</option>
+                <option>Hampshire College </option>
+                <option>Harcum College</option>
+                <option>Harrisburg University of Science & Technology</option>
+                <option>Hartwick College</option>
+                <option>Harvard University </option>
+                <option>Haverford College</option>
+                <option>Hebrew College </option>
+                <option>Hilbert College</option>
+                <option>Hobart and William Smith Colleges</option>
+                <option>Hofstra University</option>
+                <option>Holy Family University</option>
+                <option>Houghton College</option>
+                <option>Hunter College, CUNY</option>
+                <option>Husson University</option>
+                <option>Immaculata University</option>
+                <option>Indiana University of Pennsylvania</option>
+                <option>Iona College</option>
+                <option>Ithaca College</option>
+                <option>John Jay College of Criminal Justice</option>
+                <option>Johnson & Wales University-Providence</option>
+                <option>Johnson State College</option>
+                <option>Juniata College</option>
+                <option>Keene State College</option>
+                <option>Keuka College</option>
+                <option>King's College</option>
+                <option>Kutztown University of Pennyslvania</option>
+                <option>La Roche College</option>
+                <option>Landmark College</option>
+                <option>LaSalle University</option>
+                <option>Lasell College </option>
+                <option>Le Moyne College</option>
+                <option>Lebanon Valley College</option>
+                <option>Lehigh University</option>
+                <option>Lehman College, CUNY</option>
+                <option>Lesley University </option>
+                <option>Long Island University</option>
+                <option>Lyndon State College</option>
+                <option>Maine College of Art</option>
+                <option>Maine Maritime Academy</option>
+                <option>Manhattan College</option>
+                <option>Manhattan School of Music</option>
+                <option>Manhattanville College</option>
+                <option>Manor College</option>
+                <option>Mansfield University of Pennsylvania</option>
+                <option>Marist College</option>
+                <option>Marlboro College</option>
+                <option>Marymount Manhattan College</option>
+                <option>Massachusetts College of Art and Design </option>
+                <option>Massachusetts College of Liberal Arts </option>
+                <option>Massachusetts College of Pharmacy & Health Sciences </option>
+                <option>Massachusetts Institute of Technology </option>
+                <option>Medaille College</option>
+                <option>Medgar Evers College</option>
+                <option>Mercy College</option>
+                <option>Mercyhurst College</option>
+                <option>Merrimack College </option>
+                <option>Messiah College</option>
+                <option>Metropolitan College of New York</option>
+                <option>Middlebury College</option>
+                <option>Millersville University of Pennsylvania</option>
+                <option>Mitchell College</option>
+                <option>Monroe College</option>
+                <option>Montserrat College of Art </option>
+                <option>Mount Aloysius College</option>
+                <option>Mount Holyoke College </option>
+                <option>Mount Saint Mary College</option>
+                <option>Muhlenberg College</option>
+                <option>Nazareth College</option>
+                <option>Neumann College</option>
+                <option>New England College</option>
+                <option>New England College of Optometry </option>
+                <option>New England Conservatory of Music </option>
+                <option>New England Law-Boston </option>
+                <option>New England School of Communications</option>
+                <option>New Hampshire Institute of Art</option>
+                <option>New York City College of Technology, CUNY</option>
+                <option>New York College of Podiatric Medicine</option>
+                <option>New York Institute of Technology</option>
+                <option>New York Law School</option>
+                <option>New York Medical College</option>
+                <option>New York School of Interior Design</option>
+                <option>New York University</option>
+                <option>Newbury College </option>
+                <option>Niagara University</option>
+                <option>Nichols College </option>
+                <option>Northeastern University </option>
+                <option>Norwich University</option>
+                <option>Nyack College</option>
+                <option>Pace University</option>
+                <option>Paul Smith's College</option>
+                <option>Peirce College</option>
+                <option>Penn State Abington</option>
+                <option>Penn State Altoona</option>
+                <option>Penn State Beaver</option>
+                <option>Penn State Berks</option>
+                <option>Penn State Brandywine</option>
+                <option>Penn State Capital College</option>
+                <option>Penn State DuBois</option>
+                <option>Penn State Erie</option>
+                <option>Penn State Fayette</option>
+                <option>Penn State Greater Allegheny</option>
+                <option>Penn State Hazleton</option>
+                <option>Penn State Lehigh Valley</option>
+                <option>Penn State Mont Alto</option>
+                <option>Penn State New Kensington</option>
+                <option>Penn State Schuylkill</option>
+                <option>Penn State Shenango</option>
+                <option>Penn State Wilkes-Barre</option>
+                <option>Penn State Worthington Scranton</option>
+                <option>Penn State York</option>
+                <option>Pennsylvania State University</option>
+                <option>Pine Manor College </option>
+                <option>Plymouth State University</option>
+                <option>Point Park University</option>
+                <option>Pratt Institute</option>
+                <option>Providence College</option>
+                <option>Purchase College, State University of New York</option>
+                <option>Queens College, City University of New York</option>
+                <option>Quinnipiac University</option>
+                <option>Regis College </option>
+                <option>Rensselaer Polytechnic Institute</option>
+                <option>Rhode Island School of Design</option>
+                <option>Rivier University</option>
+                <option>Robert Morris University</option>
+                <option>Roberts Wesleyan College</option>
+                <option>Rochester Institute of Technology</option>
+                <option>Rosemont College</option>
+                <option>Sacred Heart University</option>
+                <option>Saint Anselm College</option>
+                <option>Saint Francis University</option>
+                <option>Saint Joseph's College of Maine</option>
+                <option>Saint Joseph's University</option>
+                <option>Saint Vincent College</option>
+                <option>Salem State University </option>
+                <option>Salus University</option>
+                <option>Sarah Lawrence College</option>
+                <option>School of the Museum of Fine Arts </option>
+                <option>Shippensburg University of Pennsylvania</option>
+                <option>Siena College</option>
+                <option>Simmons College </option>
+                <option>Skidmore College</option>
+                <option>Slippery Rock University</option>
+                <option>Southern Connecticut State University</option>
+                <option>Southern New Hampshire University</option>
+                <option>Southern Vermont College</option>
+                <option>Springfield College </option>
+                <option>St Joseph School of Nursing</option>
+                <option>St. Bonaventure University</option>
+                <option>St. Francis College</option>
+                <option>St. John Fisher College</option>
+                <option>St. John's University</option>
+                <option>St. Joseph's College</option>
+                <option>St. Lawrence University</option>
+                <option>St. Michael's College</option>
+                <option>St. Vincent's College</option>
+                <option>State University of New York at Fredonia</option>
+                <option>State University of New York at New Paltz</option>
+                <option>State University of New York at Oswego</option>
+                <option>State University of New York College at Plattsburgh</option>
+                <option>State University of New York Institute of Technology</option>
+                <option>Sterling College</option>
+                <option>Stonehill College </option>
+                <option>Stony Brook University</option>
+                <option>Suffolk University </option>
+                <option>SUNY Canton</option>
+                <option>SUNY Cobleskill</option>
+                <option>SUNY College at Old Westbury</option>
+                <option>SUNY College at Oneonta</option>
+                <option>SUNY College of Environmental Science and Forestry</option>
+                <option>SUNY College of Optometry</option>
+                <option>SUNY College of Technology at Alfred</option>
+                <option>SUNY Cortland</option>
+                <option>SUNY Delhi</option>
+                <option>SUNY Geneseo</option>
+                <option>SUNY Maritime College</option>
+                <option>SUNY Upstate Medical University</option>
+                <option>Susquehanna University</option>
+                <option>Syracuse University</option>
+                <option>Temple University</option>
+                <option>The City College of New York</option>
+                <option>The College at Brockport</option>
+                <option>The College of New Rochelle</option>
+                <option>The College of Saint Rose</option>
+                <option>The Cooper Union for the Advancement of Science and Art</option>
+                <option>The Juilliard School</option>
+                <option>The New School</option>
+                <option>The Rockefeller University</option>
+                <option>The Sage Colleges</option>
+                <option>The State University of New York at Potsdam</option>
+                <option>The University of Scranton</option>
+                <option>Thiel College</option>
+                <option>Thomas College</option>
+                <option>Thomas More College of Liberal Arts</option>
+                <option>Trinity College</option>
+                <option>Tufts University </option>
+                <option>Union College</option>
+                <option>United States Coast Guard Academy</option>
+                <option>United States Merchant Marine Academy</option>
+                <option>United States Military Academy</option>
+                <option>Unity College</option>
+                <option>University at Albany, State University of New York</option>
+                <option>University at Buffalo, State University of New York</option>
+                <option>University of Bridgeport</option>
+                <option>University of Connecticut</option>
+                <option>University of Hartford</option>
+                <option>University of Maine</option>
+                <option>University of Maine at Augusta</option>
+                <option>University of Maine at Farmington</option>
+                <option>University of Maine at Fort Kent</option>
+                <option>University of Maine at Machias</option>
+                <option>University of Maine at Presque Isle</option>
+                <option>University of Massachusetts - Boston </option>
+                <option>University of Massachusetts - Dartmouth </option>
+                <option>University of Massachusetts - Lowell </option>
+                <option>University of New England</option>
+                <option>University of New Hampshire at Manchester</option>
+                <option>University of New Hampshire-Main Campus</option>
+                <option>University of New Haven</option>
+                <option>University of Pennsylvania</option>
+                <option>University of Pittsburgh</option>
+                <option>University of Pittsburgh at Bradford</option>
+                <option>University of Pittsburgh at Greensburg</option>
+                <option>University of Pittsburgh at Johnstown</option>
+                <option>University of Pittsburgh at Titusville</option>
+                <option>University of Rochester</option>
+                <option>University of Saint Joseph</option>
+                <option>University of Southern Maine</option>
+                <option>University of the Sciences in Philadelphia</option>
+                <option>University of Vermont</option>
+                <option>Utica College</option>
+                <option>Vassar College</option>
+                <option>Vaughn College of Aeronautics and Technology</option>
+                <option>Vermont College of Fine Arts </option>
+                <option>Vermont Law School</option>
+                <option>Vermont Technical College</option>
+                <option>Villa Maria College</option>
+                <option>Wagner College</option>
+                <option>Washington and Jefferson College</option>
+                <option>Webb Institute</option>
+                <option>Wells College</option>
+                <option>Wentworth Institute of Technology </option>
+                <option>Wesleyan University</option>
+                <option>West Chester University of Pennsylvania</option>
+                <option>Western Connecticut State University</option>
+                <option>Western New England University </option>
+                <option>Wheelock College </option>
+                <option>Wilkes University</option>
+                <option>Williams College </option>
+                <option>Wilson College</option>
+                <option>Worcester Polytechnic Institute </option>
+                <option>Worcester State University </option>
+                <option>Yale University</option>
+                <option>Yeshiva University</option>
+                <option>York College of Pennsylvania</option>
+                <option>York College, City University of New York</option>
+            </select>
+        </div>
+      </div>
+
+      <div class="col-xs-12 col-sm-4">
+         <img src="../img/book.png" width="22" alt="">
+            <div class="btn-group" style="width:90%;">
+                  <select class="btn btn-profile-dropdown" id="dropdown-list" role="menu" ng-model="majorFilter">        
+                        <option value="">All Majors</option>        
+                        <option value="English">English</option>
+                        <option value="Humanities">Humanities</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Studio Art">Studio Art</option>
+                        <option value="Performing Arts">Performing Art</option>
+                        <option value="Life Sciences">Life Sciences</option>
+                        <option value="Religion, Philosophy">Religion, Philosophy</option>
+                        <option value="Lanugage">Lanugage</option>
+                        <option value="Math">Math</option>
+                  </select>
+            </div>
+      </div>
+        
+      <div class="col-xs-12 col-sm-4">
+         <img src="../img/wrench.png" width="22" alt="">
+          <div class="btn-group" style="width:90%;">
+              <select class="btn btn-profile-dropdown" id="dropdown-list" role="menu" ng-model="skillFilter">
+                  <option value="">All Skills</option>
+                  <option>Designer</option>
+                  <option>Photographer/Film Maker</option>
+                  <option>Developer</option>
+                  <option>Social Media</option>
+                  <option>Engineer</option>
+                  <option>Finance Guru</option>
+                  <option>Writer/Blogger</option>
+                  <option>Performer</option>
+                  <option>Sales/Business Strategy</option>
+                  <option>Tutor</option>
+              </select>
+            </div>
+      </div>
+</div>
+       
+<hr>
+
+<div class="row">
+<div class="col-xs-12 col-sm-4" ng-repeat="profile in profs | filter:schoolFilter | filter:majorFilter | filter:skillFilter">
+	<profile profile="profile" ng-show="profile"></profile>
+</div>
+</div>
+
+    </div>
+</div>

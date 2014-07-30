@@ -1,0 +1,277 @@
+
+<div class="row ">
+		<h1>Pinpoint a Job <a href="http://opencampusjobs.com/app.html#/logout" style="color: #807f80;"><button class="btn btn-sm round-gold-btn pull-right">Log Out</button></a>
+	    <a href="http://opencampusjobs.com/app.html#/account" style="color: #807f80;"><button class="btn btn-sm round-green-btn pull-right">Edit Profile</button></a></h1>
+
+<div class="row" style="padding: 15px;">
+
+	<div class="col-xs-12 col-sm-4">
+		<img src="../img/clock2.png" width="20" alt=""><div class="btn-group" style="width:90%;">
+		  <select class="btn btn-profile-dropdown" id="dropdown-list" role="menu" ng-model="timeframeFilter">
+		  	<option value="Gig">Gig</option>
+		  	<option value="Sprint">Sprint</option>
+		  	<option value="Project">Project</option>
+
+		  </select>
+		</div>
+	</div>
+
+	<div class="col-xs-12 col-sm-4">
+		<img src="../img/wrench.png" width="20" alt=""><div class="btn-group" style="width:90%;">
+		  <select class="btn btn-profile-dropdown" id="dropdown-list" role="menu" ng-model="jobSkillFilter">
+		  	<option>Designer</option>
+		  	<option>Photographer/Film Maker</option>
+		  	<option>Developer</option>
+		  	<option>Social Media</option>
+		  	<option>Engineer</option>
+		  	<option>Finance Guru</option>
+		  	<option>Writer / Blogger</option>
+		  	<option>Performer</option>
+		  	<option>Sales / Business Strategist</option>
+		  	<option>Tutor</option>
+		  	<option>Student Professional</option>
+		  </select>
+		</div>
+	</div>
+
+	<div class="col-xs-12 col-sm-4">
+		<img src="../img/pinpoint.png" width="12" alt=""><div class="btn-group" style="width:90%;">
+		  <select class="btn btn-profile-dropdown" id="dropdown-list" role="menu" ng-model="locationFilter">
+			<option>Abington
+			</option><option>Albany
+			</option><option>Alfred
+			</option><option>Allentown
+			</option><option>Allentown
+			</option><option>Altoona
+			</option><option>Amherst
+			</option><option>Amherst 
+			</option><option>Annandale-on-Hudson
+			</option><option>Annville
+			</option><option>Aston
+			</option><option>Augusta
+			</option><option>Aurora
+			</option><option>Bangor
+			</option><option>Bar Harbor
+			</option><option>Beaver
+			</option><option>Bennington
+			</option><option>Berks
+			</option><option>Bethlehem
+			</option><option>Bethpage
+			</option><option>Beverly 
+			</option><option>Biddeford
+			</option><option>Bloomsburg 
+			</option><option>Boston 
+			</option><option>Bradford
+			</option><option>Brandywine
+			</option><option>Bridgeport
+			</option><option>Bridgeport ...
+			</option><option>Bridgewater 
+			</option><option>Brockport
+			</option><option>Bronx
+			</option><option>Bronxville
+			</option><option>Brookline 
+			</option><option>Brooklyn
+			</option><option>Brooklyn Heights
+			</option><option>Brunswick
+			</option><option>Bryn Athyn
+			</option><option>Bryn Mawr
+			</option><option>Buffalo
+			</option><option>Buffalo ...
+			</option><option>Burlington
+			</option><option>California 
+			</option><option>Cambridge 
+			</option><option>Canton
+			</option><option>Carlisle
+			</option><option>Castine
+			</option><option>Castleton
+			</option><option>Cazenovia
+			</option><option>Center Valley
+			</option><option>Chambersburg
+			</option><option>Cheektowaga
+			</option><option>Chestnut Hill 
+			</option><option>Chicopee 
+			</option><option>Clarion
+			</option><option>Clinton
+			</option><option>Cobleskill
+			</option><option>Colchester
+			</option><option>Concord 
+			</option><option>Cortland
+			</option><option>Craftsbury
+			</option><option>Cresson
+			</option><option>Danbury
+			</option><option>Dartmouth 
+			</option><option>Delhi
+			</option><option>Dobbs Ferry
+			</option><option>Doylestown
+			</option><option>DuBois
+			</option><option>Dudley 
+			</option><option>Dunmore
+			</option><option>Durham
+			</option><option>East Hartford
+			</option><option>Easton 
+			</option><option>Elkins Park
+			</option><option>Elmira
+			</option><option>Erie
+			</option><option>Fairfield
+			</option><option>Farmingdale
+			</option><option>Farmington
+			</option><option>Fayette
+			</option><option>Fitchburg 
+			</option><option>Flushing
+			</option><option>Fort Kent
+			</option><option>Framingham 
+			</option><option>Franklin 
+			</option><option>Fredonia
+			</option><option>Garden City
+			</option><option>Geneseo
+			</option><option>Geneva
+			</option><option>Glen Cove
+			</option><option>Great Barrington 
+			</option><option>Greensburg
+			</option><option>Greenville
+			</option><option>Grove City
+			</option><option>Gwynedd Valley
+			</option><option>Hamburg
+			</option><option>Hamden
+			</option><option>Hamilton
+			</option><option>Hanover 
+			</option><option>Harrisburg
+			</option><option>Hartford
+			</option><option>Haverford
+			</option><option>Hazleton
+			</option><option>Hempstead
+			</option><option>Henniker 
+			</option><option>Houghton
+			</option><option>Huntingdon
+			</option><option>Immaculata
+			</option><option>Indiana
+			</option><option>Ithaca
+			</option><option>Jamaica
+			</option><option>Jenkintown
+			</option><option>Johnson
+			</option><option>Johnson City
+			</option><option>Johnstown
+			</option><option>Keene 
+			</option><option>Keuka Park
+			</option><option>Kings Point ...
+			</option><option>Kutztown
+			</option><option>Lancaster
+			</option><option>Latrobe
+			</option><option>Lehman
+			</option><option>Lewisburg
+			</option><option>Lewiston
+			</option><option>Lewiston
+			</option><option>Longmeadow 
+			</option><option>Loretto
+			</option><option>Loudonville
+			</option><option>Lowell 
+			</option><option>Lyndonville
+			</option><option>Machias
+			</option><option>Manchester
+			</option><option>Mansfield
+			</option><option>Marlboro
+			</option><option>McKeesport
+			</option><option>Mechanicsburg
+			</option><option>Medford 
+			</option><option>Merrimack
+			</option><option>Middlebury
+			</option><option>Middletown
+			</option><option>Millersville
+			</option><option>Mont Alto
+			</option><option>Montpelier
+			</option><option>Moon Township
+			</option><option>Nashua
+			</option><option>Needham 
+			</option><option>New Britain
+			</option><option>New Haven
+			</option><option>New Kensington
+			</option><option>New London
+			</option><option>New London 
+			</option><option>New Paltz
+			</option><option>New Rochelle
+			</option><option>New York City
+			</option><option>Newburgh
+			</option><option>Newton 
+			</option><option>Newton Centre 
+			</option><option>North Adams 
+			</option><option>North Andover 
+			</option><option>Northfield
+			</option><option>Nyack
+			</option><option>Old Westbury
+			</option><option>Oneonta
+			</option><option>Orono
+			</option><option>Oswego
+			</option><option>Paul Smiths
+			</option><option>Philadelphia
+			</option><option>Pittsburgh
+			</option><option>Plainfield
+			</option><option>Plattsburgh ...
+			</option><option>Plymouth
+			</option><option>Portland
+			</option><option>Potsdam
+			</option><option>Poughkeepsie
+			</option><option>Poultney
+			</option><option>Presque Isle
+			</option><option>Providence
+			</option><option>Purchase
+			</option><option>Putney
+			</option><option>Queens
+			</option><option>Quincy 
+			</option><option>Randolph Center
+			</option><option>Reading
+			</option><option>Rindge 
+			</option><option>Rochester
+			</option><option>Rosemont
+			</option><option>Rutland
+			</option><option>Salem 
+			</option><option>Saratoga
+			</option><option>Schenectady
+			</option><option>Schuylkill Haven
+			</option><option>Scranton
+			</option><option>Selinsgrove
+			</option><option>Sharon
+			</option><option>Shippensburg
+			</option><option>Slippery Rock
+			</option><option>Smithfield
+			</option><option>South Hadley 
+			</option><option>South Lancaster 
+			</option><option>South Royalton
+			</option><option>Springfield 
+			</option><option>St. Bonaventure
+			</option><option>Standish
+			</option><option>Staten Island
+			</option><option>Stony Brook
+			</option><option>Storrs ...
+			</option><option>Syracuse
+			</option><option>The Bronx
+			</option><option>Throggs Neck
+			</option><option>Titusville
+			</option><option>Troy
+			</option><option>Unity
+			</option><option>University Park
+			</option><option>Utica
+			</option><option>Valhalla
+			</option><option>Vestal
+			</option><option>Waltham 
+			</option><option>Washington
+			</option><option>Waterville
+			</option><option>Wenham 
+			</option><option>West Chester
+			</option><option>West Hartford
+			</option><option>West Haven ...
+			</option><option>West Point
+			</option><option>Weston 
+			</option><option>Wilkes-Barre
+			</option><option>Williamstown 
+			</option><option>Willimantic
+			</option><option>Worcester 
+			</option><option>York</option>
+		</select>
+	</div>
+</div>
+
+<hr>
+
+<div class="row">
+	<job ng-repeat="job in jobs" data="job" profile="profile"></job>
+</div>

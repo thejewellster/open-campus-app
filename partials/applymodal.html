@@ -1,0 +1,28 @@
+<div class="modal-content">
+	<div class="modal-header">
+		<button type="button" class="close" ng-click="close()" aria-hidden="true">&times;</button>
+		<div class="modal-title" id="myModalLabel">
+			Apply for a job
+		</div>
+	</div>
+
+	<div class="modal-body" style="color: #000;">
+		<form ng-submit="mail()">
+
+			<div class="mc-field-group">
+				<label for="mce-FNAME">Your name
+				</label>
+				<input type="text" value="" placeholder="" name="FNAME" class="turtle required" id="fname" ng-model="email.name">
+			</div>
+			<div class="mc-field-group">
+				<label for="mce-MMERGE8">Add a message
+				</label>
+				<input type="text" name="message" placeholder="Why do you want them to work for you?" class="turtle required" value="" id="message" ng-model="email.message">
+			</div>
+
+			<input type="submit" value="Send" name="subscribe" id="mc-embedded-subscribe" style="width: 20%; text-align:center;" class="button" ng-click="apply()">
+		</form>
+	</div>
+
+
+</div>
