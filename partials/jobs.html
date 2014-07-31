@@ -275,7 +275,7 @@
 <hr>
 
 <div class="row">
-	<div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="job in jobs | filter:timeframeFilter | filter:skillFilter | filter:locationFilter">
+	<div class="col-xs-12 col-sm-6 col-md-3" ng-repeat="job in jobsArr | filter:timeframeFilter | filter:skillFilter | filter:locationFilter">
 		<job data="job" profile="profile"></job>
 	</div>
 </div>

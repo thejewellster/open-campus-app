@@ -56,7 +56,15 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
 
       // constrain number of messages by limit into syncData
       // add the array into $scope.messages
-      syncData('jobs').$bind($scope, 'jobs')
+      syncData('jobs').$bind($scope, 'jobs').then(function (data) {
+         $scope.jobsT = $.map($scope.jobs, function(value, index) {
+             return value;
+         });
+
+         $scope.jobsArr = $scope.jobsT.filter(function (job) {
+            return (typeof job) === 'object' && job != undefined;
+         })
+      });
 
       // add new messages to the list
       $scope.addJob = function() {
@@ -75,32 +83,28 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
 
                $scope.user.hasPost = true;
 
-               $scope.jobs.$add(angular.copy($scope.job));
-
-               $scope.$apply();
-
                console.log($scope.jobs);
 
-               // window.location = ('http://opencampusjobs.com/partials/post-confirm.html');
 
-               // wsh.exec({
-               //   code: function() {
-               //     return fs.Segfaultx64.test.charge(args);
-               //   },
-               //   args: {
-               //     token: token.id,
-               //     job: $scope.job
-               //   },
-               //   success: function(receipt) {
-               //    console.log(receipt);
-               //     if (receipt.error) {
-               //       return alert;
-               //     }
-               //   }, 
-               //   failure: function(a) {
-               //    console.log(a)
-               //   }
-               // });
+               wsh.exec({
+                 code: function() {
+                   return fs.Segfaultx64.test.charge(args);
+                 },
+                 args: {
+                   token: token.id,
+                   job: $scope.job
+                 },
+                 success: function(receipt) {
+                  console.log(receipt);
+                   if (receipt.error) {
+                     return alert;
+                   }
+                  window.location = ('http://opencampusjobs.com/partials/post-confirm.html');
+                 }, 
+                 failure: function(a) {
+                  console.log(a)
+                 }
+               });
             }
          });
 
@@ -132,7 +136,8 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
            rememberMe: true,
            scope: 'email'
          }, function (user) {
-            loginService.createProfile(user.uid, user.email);
+            console.log(user)
+            loginService.createProfile(user.uid, user.email, user.name);
          });
          // }
       };
@@ -158,7 +163,10 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
       $scope.createAccount = function() {
          $scope.err = null;
          if( assertValidLoginAttempt() ) {
-            loginService.createAccount($scope.email, $scope.pass, function(err, user) {
+            loginService.createAccount($scope.email, $scope.pass, $scope.name, function(err, user) {
+               if (user == undefined) {
+                  $scope.err = "That email is already taken."
+               }
                loginService.createProfile(user.uid, user.email);
                if( err ) {
                   $scope.err = err? err + '' : null;
