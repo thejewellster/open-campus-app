@@ -128,11 +128,10 @@ h6{
 
 .intro-header-sentence-inverse{
   font-size: 3em;
-  color: #63b258;
+  color: #000;
   background-color: #fff;
   text-align: center;
   font-style: italic;
-  font-weight: 100;
   line-height: normal;
 }
 
@@ -678,11 +677,10 @@ ul.sub-buttons li a:hover{
 .job-template{
   margin: 5px;
   padding: 0;
-  display: inline-block;
   background-color: #ededed;
   color: #000;
   height: auto;
-  width: 300px;
+  max-width: 300px;
 }
 
 .top-bar-post{
@@ -700,7 +698,7 @@ ul.sub-buttons li a:hover{
 
 .template-top a, .template-top h1{
   color: #fff;
-  font-size: 25px;
+  font-size: 17px;
   margin: 0;
   padding-top: 10px;
   text-align: left;
@@ -718,13 +716,15 @@ ul.sub-buttons li a:hover{
 .template-top h2{
   color: #fff;
   margin: 0 auto;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .short-description{
   padding: 10px;
   padding-top: 15px;
-  font-size: 20px;
+  font-size: 15px;
+  height: 68px;
+  overflow:auto;
 }
 
 ul.logistics, ul.payment-info{
@@ -757,7 +757,7 @@ ul.logistics li, ul.payment-info li{
   display: block;
   padding: 10px 2px;
   width: 90%;
-  border-bottom: 2px dashed #c0c0c0;
+  border-bottom: 1px dotted #c0c0c0;
 }
 
 .long-description{

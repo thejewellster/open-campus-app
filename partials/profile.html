@@ -34,9 +34,6 @@
 						<button type="button" class="btn skill-btns btn-skill-level-3" ng-click="show(skill)" ng-show="skill == 'Academic Accomplishments'">
 							<img src="img/graduates.png" width="30" alt="">
 						</button>
-						<button class="btn skill-btns btn-skill-level-1"  ng-click="show(skill)" ng-show="skill == 'Award'">
-							Awards
-						</button>
 						<button class="btn skill-btns btn-skill-level-1"  ng-click="show(skill)" ng-show="skill == 'Leadership'">
 							Leadership
 						</button>
@@ -77,8 +74,10 @@
 							</div>
 						</div>
 					</div>
+				</div>
 					
 				<div ng-repeat="(skill, attrs) in profile.skills" ng-show="shown === skill">
+					{{ shown }}
 					<div ng-class="{'job-template-college': skill === 'Academic Accomplishments', 'job-template-oc': skill !== 'Academic Accomplishments'}" ng-repeat="job in attrs.jobs">
 						<button type="button" class="close" ng-click="remove($index, skill)" aria-hidden="true" ng-show="d">&times;</button>
 						<button type="button" class="close" ng-click="edit($index, skill)" aria-hidden="true" ng-show="d">Edit</button>
@@ -102,6 +101,5 @@
 			</div>
 		</div>
 	</div>
-</div>
 </div>
 </div>

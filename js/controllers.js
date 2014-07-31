@@ -235,7 +235,7 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
          var p = $scope.profile;
          var j = $scope.job;
 
-         if (j.skill && j.org && j.time && j.date && j.description) {
+         if (j.skill && j.org && j.date && j.description) {
             p.skills = p.skills || {};
             var skill = p.skills[j.skill] || {jobs: []};
             skill.jobs.push(j);
