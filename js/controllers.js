@@ -207,11 +207,15 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
          var j = $scope.job;
 
          if (j.skill && j.org && j.date && j.description) {
-            p.skills = p.skills || {};
-            var skill = p.skills[j.skill] || {jobs: []};
-            skill.jobs.push(j);
-            p.skills[j.skill] = skill;
-            // $scope.job = {};
+            if (j.editing) {
+              j.editing = false
+            } else {
+              p.skills = p.skills || {};
+              var skill = p.skills[j.skill] || {jobs: []};
+              skill.jobs.push(j);
+              p.skills[j.skill] = skill;
+            }
+            $scope.job = {};
          } else {
             // Error
             $scope.badinjob = true;

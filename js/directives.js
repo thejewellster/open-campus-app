@@ -33,6 +33,7 @@ angular.module('myApp.directives', []).
 
         $scope.edit = function (job, skill) {
           $scope.editing = $scope.profile.skills[skill].jobs[job];
+          $scope.editing.editing = true;
         }
 
         $scope.show = function (toShow) {
