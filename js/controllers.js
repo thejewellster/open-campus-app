@@ -20,22 +20,6 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
       });
    }])
 
-  .controller('ChatCtrl', ['$scope', 'syncData', function($scope, syncData) {
-      $scope.newMessage = null;
-
-      // constrain number of messages by limit into syncData
-      // add the array into $scope.messages
-      $scope.messages = syncData('messages', 10);
-
-      // add new messages to the list
-      $scope.addMessage = function() {
-         if( $scope.newMessage ) {
-            $scope.messages.$add({text: $scope.newMessage});
-            $scope.newMessage = null;
-         }
-      };
-   }])
-
   .controller('JobCtrl', ['$scope', 'syncData', '$location', function($scope, syncData, $location) {
 
       $scope.syncAccount = function() {
@@ -70,7 +54,7 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
       $scope.addJob = function() {
 
          var handler = StripeCheckout.configure({
-            key: 'pk_test_ETMOz3Bg4AAj6z8MGYMSBFpm',
+            key: 'pk_test_ETMOz3Bg4AAj6z8MGYMSBFpmf',
             image: '/square-image.png',
             token: function(token) {
                $scope.jobs = ($scope.jobs && $scope.jobs != '')? $scope.jobs : {};
@@ -124,14 +108,6 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
       $scope.createMode = false;
 
       $scope.login = function(cb) {
-         // $scope.err = null;
-         // if( !$scope.email ) {
-         //    $scope.err = 'Please enter an email address';
-         // }
-         // else if( !$scope.pass ) {
-         //    $scope.err = 'Please enter a password';
-         // }
-         // else {
          loginService.fb({
            rememberMe: true,
            scope: 'email'
@@ -139,7 +115,6 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
             console.log(user)
             loginService.createProfile(user.uid, user.email, user.name);
          });
-         // }
       };
 
       $scope.loginPass = function(cb) {
@@ -211,21 +186,9 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
             syncData('profiles').$bind($scope, 'profiles').then(function () {
                $scope.profile = $scope.profiles[$scope.user.email.split('.').join('|dot|')];
                $scope.profile.id = $scope.auth.user.id;
-
-               // Stick sidebar stuff.
-               // $('#preview').waypoint('sticky');
-
-               // $('#preview').waypoint(function (direction) {
-               //    if (direction === 'down') {
-               //       $('.stuck').css({'margin-left': $('.container').position().left + 760});
-               //    } else {
-               //       $('#preview').css({'margin-left': 0});
-               //    }
-               // })
             });
          });
       };
-      // set initial binding
       $scope.syncAccount();
       
 
@@ -259,68 +222,4 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
       $scope.logout = function() {
          loginService.logout();
       };
-
-      // $scope.oldpass = null;
-      // $scope.newpass = null;
-      // $scope.confirm = null;
-
-      // $scope.reset = function() {
-      //    $scope.err = null;
-      //    $scope.msg = null;
-      //    $scope.emailerr = null;
-      //    $scope.emailmsg = null;
-      // };
-
-      // $scope.updatePassword = function() {
-      //    $scope.reset();
-      //    loginService.changePassword(buildPwdParms());
-      // };
-
-      // $scope.updateEmail = function() {
-      //   $scope.reset();
-      //   // disable bind to prevent junk data being left in firebase
-      //   $scope.unBindAccount();
-      //   changeEmailService(buildEmailParms());
-      // };
-
-      // function buildPwdParms() {
-      //    return {
-      //       email: $scope.auth.user.email,
-      //       oldpass: $scope.oldpass,
-      //       newpass: $scope.newpass,
-      //       confirm: $scope.confirm,
-      //       callback: function(err) {
-      //          if( err ) {
-      //             $scope.err = err;
-      //          }
-      //          else {
-      //             $scope.oldpass = null;
-      //             $scope.newpass = null;
-      //             $scope.confirm = null;
-      //             $scope.msg = 'Password updated!';
-      //          }
-      //       }
-      //    };
-      // }
-      // function buildEmailParms() {
-      //    return {
-      //       newEmail: $scope.newemail,
-      //       pass: $scope.pass,
-      //       callback: function(err) {
-      //          if( err ) {
-      //             $scope.emailerr = err;
-      //             // reinstate binding
-      //             $scope.syncAccount();
-      //          }
-      //          else {
-      //             // reinstate binding
-      //             $scope.syncAccount();
-      //             $scope.newemail = null;
-      //             $scope.pass = null;
-      //             $scope.emailmsg = 'Email updated!';
-      //          }
-      //       }
-      //    };
-      // }
-
    }]);
