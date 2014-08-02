@@ -27,6 +27,8 @@ a:hover{
   text-decoration: none;
 }
 
+
+
 ::-webkit-input-placeholder {
    font-weight: 300;
 }
@@ -1108,7 +1110,7 @@ padding: 10px;
 .team-photo:hover{
   filter: none;
     -webkit-filter: none;
-  background-color: #63b258;
+
   -webkit-transition: all 600ms ease;
   -moz-transition: all    600ms ease;
   -ms-transition: all     600ms ease;
@@ -1135,6 +1137,13 @@ padding: 10px;
   background-color: #404040;
   height: 500px;
   margin-top: 50px;
+}
+
+.team-member-info a, .team-member-name a{
+  color: #68bd52;
+}
+.team-member-info a:hover, .team-member-name a:hover{ 
+  color: #4e9a34;
 }
 
 
