@@ -155,10 +155,11 @@ var ModalInstanceCtrl = function ($scope, $modalInstance, profile, job) {
   $scope.apply = function() {
      var e = $scope.email;
      if (e.message) {
-        var body = "<h2>New Application for your job posting!</h2><br>[name] applied for your job.<br>“[message]”<br><a href='http://opencampusjobs.com/app.html/#/view/[from]'><img src='[headshot]'></a>"
+        var body = "<h2>New Application for your job posting!</h2><br>[name] applied for your job.<br>“[message]”<br>You can reach her at [contact].<br><a href='http://opencampusjobs.com/app.html/#/view/[from]'><img src='[headshot]'></a>"
         
         body = body.replace('[message]', e.message);
         body = body.replace('[name]', e.name);
+        body = body.replace('[contact]', e.contact);
         body = body.replace('[from]', $scope.profile.email.split('.').join('|dot|'));
         body = body.replace('[headshot]', 'http://graph.facebook.com/[id]/picture?type=large'.replace('[id]', $scope.profile.id));
 
@@ -171,7 +172,7 @@ var ModalInstanceCtrl = function ($scope, $modalInstance, profile, job) {
             'key': 'JW-lzYTrFJZ78CnQHBm5Ww',
             'message': {
               'from_email': "noreply@opencampusjobs.com",
-              "from_name": "Open Campus Application",
+              "from_name": "Open Campus Job Application",
               'to': [
                   {
                     'email': job.email,
