@@ -49,6 +49,11 @@ angular.module('myApp.routes', ['ngRoute'])
          controller: 'LoginCtrl'
       });
 
+      $routeProvider.when('/reset', {
+         templateUrl: 'partials/reset.html',
+         controller: 'LoginCtrl'
+      });
+
       $routeProvider.when('/view/:email', {
          templateUrl: 'partials/home.html',
          controller: 'HomeCtrl'

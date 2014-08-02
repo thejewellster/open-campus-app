@@ -1,0 +1,38 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-3 sign-up-box">
+            <h1 style="  font-family: 'Cedarville Cursive', cursive; text-align:center;">Reset Password</h1>
+            <p ng-show="err" class="alert alert-danger">{{err}}</p>
+            <form>
+                <div clss="row">
+
+                    <div class="col-xs-12 col-sm-6">
+                        <input type="email" class="post-form-field " placeholder="Email" ng-model="opts.email" />
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6">
+                        <input type="password" class="post-form-field " placeholder="Old Password" ng-model="opts.oldpass" />
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6">
+                        <input type="password" class="post-form-field " placeholder="New Password" ng-model="opts.newpass" />
+                    </div>
+                    <div class="col-xs-12 col-sm-6"> 
+                        <input type="password" class="post-form-field" placeholder="Confirm New Password" ng-model="opts.confirm" />
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-xs-12" style="margin-top:25px;">
+                        <button class="btn btn-block round-green-btn" ng-click="resetPassword()" ng-hide="createMode">Update &#8594;</button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+
+
+

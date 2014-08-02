@@ -158,6 +158,25 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
          }
       };
 
+      $scope.sendReminder = function () {
+        console.log($scope.email)
+        loginService.sendReset($scope.email);
+      }
+
+      $scope.opts = {};
+
+      $scope.resetPassword = function() {
+        $scope.opts.callback = function(err) {
+          console.log(err)
+          if (!err) {
+            window.location = '/app.html'
+          } else {
+            $scope.err = err;
+          }
+        }
+        loginService.changePassword($scope.opts)
+      }
+
       function assertValidLoginAttempt() {
          if( !$scope.email ) {
             $scope.err = 'Please enter an email address';
@@ -170,6 +189,8 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
          }
          return !$scope.err;
       }
+
+
    }])
 
    .controller('LogoutCtrl', ['$scope', 'loginService', 'changeEmailService', 'firebaseRef', 'syncData', '$location', 'FBURL', function($scope, loginService, changeEmailService, firebaseRef, syncData, $location, FBURL) {
