@@ -131,6 +131,7 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
                if( !err ) {
                   cb && cb(user);
                }
+              loginService.createProfile(user.uid, user.email, $scope.name || user.name);
             });
          }
       };
@@ -138,18 +139,18 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
       $scope.createAccount = function() {
          $scope.err = null;
          if( assertValidLoginAttempt() ) {
-            loginService.createAccount($scope.email, $scope.pass, $scope.name, function(err, user) {
+            loginService.createAccount($scope.email, $scope.pass, function(err, user) {
                if (user == undefined) {
                   $scope.err = "That email is already taken."
                }
-               loginService.createProfile(user.uid, user.email);
+               loginService.createProfile(user.uid, user.email, $scope.name);
                if( err ) {
                   $scope.err = err? err + '' : null;
                }
                else {
                   // must be logged in before I can write to my profile
                   $scope.login(function() {
-                     loginService.createProfile(user.uid, user.email);
+                     loginService.createProfile(user.uid, user.email, $scope.name);
                      $location.path('/account');
                   });
                   $location.path('/account');
