@@ -155,7 +155,7 @@ var ModalInstanceCtrl = function ($scope, $modalInstance, profile, job) {
   $scope.apply = function() {
      var e = $scope.email;
      if (e.message) {
-        var body = "<h2>New Application for your job posting!</h2><br>[name] applied for your job.<br>“[message]”<br>You can reach her at [contact].<br><a href='http://opencampusjobs.com/app.html/#/view/[from]'><img src='[headshot]'></a>"
+        var body = "<h2>New Application for your job posting!</h2><br>[name] applied for your job.<br>“[message]”<br>You can reach them at [contact].<br><a href='http://opencampusjobs.com/app.html#/view/[from]'><img src='[headshot]'></a>"
         
         body = body.replace('[message]', e.message);
         body = body.replace('[name]', e.name);
@@ -180,7 +180,7 @@ var ModalInstanceCtrl = function ($scope, $modalInstance, profile, job) {
                   }
                 ],
               'autotext': 'true',
-              'subject': 'You have recieved an application for an Open Campus job',
+              'subject': 'You have received an application for an Open Campus job',
               'html': body
             }
           }
