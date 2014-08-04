@@ -11,12 +11,12 @@ angular.module('myApp.directives', []).
   }])
   .directive('profile', [function () {
     return {
-      controller: ['$scope', '$modal', 'syncData', function ($scope, $modal, syncData) {
+      controller: ['$scope', '$modal', 'syncData', '$rootScope', function ($scope, $modal, syncData, $rootScope) {
         $scope.shown = '';
 
       $scope.syncAccount = function() {
          $scope.user = {};
-         syncData(['users', $scope.uid]).$bind($scope, 'user').then(function(unBind) {
+         syncData(['users', $rootScope.auth.user.uid]).$bind($scope, 'user').then(function(unBind) {
             $scope.unBindAccount = unBind;
          });
       };
