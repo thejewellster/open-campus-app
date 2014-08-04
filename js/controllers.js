@@ -54,7 +54,7 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
       $scope.addJob = function() {
 
          var handler = StripeCheckout.configure({
-            key: 'pk_test_ETMOz3Bg4AAj6z8MGYMSBFpmf',
+            key: 'pk_live_Cj0NfYaa5rcPgOKTvKswUND9',
             image: '/square-image.png',
             token: function(token) {
                $scope.jobs = ($scope.jobs && $scope.jobs != '')? $scope.jobs : {};
