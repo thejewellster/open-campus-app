@@ -95,7 +95,7 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
        handler.open({
          name: 'Open Campus',
          description: 'Job Posting',
-         amount: 1000
+         amount: 5000
        });
 
       };
