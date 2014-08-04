@@ -20,11 +20,11 @@
 
 				<ul class="personal-info">
 					<li><img src="img/graduates.png" width="25" style="padding-right:5px;" alt="">{{ profile.college }}</li>
-					<li><img src="img/book.png" width="20" style="padding-right:5px;" alt="">{{ profile.major }}</li><br>
-					<li><img src="img/pinpoint.png" width="14" style="padding-right:5px;" alt="">{{ profile.location }}</li>	
+					<li><img src="img/pinpoint.png" width="14" style="padding-right:5px;" alt="">{{ profile.location }}</li><br>
+					<li><img src="img/book.png" width="20" style="padding-right:5px;" alt="">{{ profile.major }}</li>	
 				</ul>
 				<div id="face-tap" ng-click="shown = ''">
-					<img src="http://graph.facebook.com/{{ profile.id }}/picture?type=large" width="100" class="marcella img-circle" data-target="bottom-half-marcella" alt="">
+					<img src="http://graph.facebook.com/{{ profile.id }}/picture?type=large" height="100" class="marcella img-circle" data-target="bottom-half-marcella" alt="">
 				</div>
 				<div class="skill-buttons">
 					<button type="button" class="btn skill-btns btn-skill-level-1" ng-click="show('about')">
