@@ -2,15 +2,11 @@
 
 <div class="container">
   <div class="row">
+    <div class="alert alert-success" ng-show="sent">Tap sent!</div>
+    <h1>Pinpoint A Student <a href="/app.html#/logout" style="color: #807f80;"><button class="btn btn-sm round-gold-btn pull-right">Log Out</button></a>
+    <a href="/app.html#/post" style="color: #807f80;"><button class="btn btn-sm round-green-btn pull-right">Post A Job</button></a></h1>
 
-
-        <div class="alert alert-success" ng-show="sent">Tap sent!</div>
-        
-        
-        <h1>Pinpoint A Student <a href="/app.html#/logout" style="color: #807f80;"><button class="btn btn-sm round-gold-btn pull-right">Log Out</button></a>
-        <a href="/app.html#/post" style="color: #807f80;"><button class="btn btn-sm round-green-btn pull-right">Post A Job</button></a></h1>
-
-        <br>
+    <br>
       <div class="col-xs-12 col-sm-3">
         <img src="../img/graduates.png" width="25" alt="">
           <div class="btn-group" style="width:85%;">
@@ -408,25 +404,6 @@
                     <option>Science & Math</option>
             </div>
       </div>
-        
-      <div class="col-xs-12 col-sm-3">
-         <img src="../img/wrench.png" width="22" alt="">
-          <div class="btn-group" style="width:85%;">
-              <select class="btn btn-profile-dropdown" id="dropdown-list" role="menu" ng-model="skillFilter">
-                  <option value="">All Skills</option>
-                  <option>Designer</option>
-                  <option>Photographer/Film Maker</option>
-                  <option>Developer</option>
-                  <option>Social Media</option>
-                  <option>Engineer</option>
-                  <option>Finance Guru</option>
-                  <option>Writer/Blogger</option>
-                  <option>Performer</option>
-                  <option>Sales/Business Strategy</option>
-                  <option>Tutor</option>
-              </select>
-            </div>
-      </div>
 
       <div class="col-xs-12 col-sm-3">
             <img src="../img/pinpoint.png" width="12" alt=""><div class="btn-group" style="width:85%;">
@@ -665,7 +642,27 @@
                 </select>
             </div>
         </div>
-</div>
+
+        <div class="col-xs-12 col-sm-3">
+            <img src="../img/wrench.png" width="22" alt="">
+            <div class="btn-group" style="width:85%;">
+                <select class="btn btn-profile-dropdown" id="dropdown-list" role="menu" ng-model="skillFilter">
+                  <option value="">All Skills</option>
+                  <option>Designer</option>
+                  <option>Photographer/Film Maker</option>
+                  <option>Developer</option>
+                  <option>Social Media</option>
+                  <option>Engineer</option>
+                  <option>Finance Guru</option>
+                  <option>Writer/Blogger</option>
+                  <option>Performer</option>
+                  <option>Sales/Business Strategy</option>
+                  <option>Tutor</option>
+                </select>
+            </div>
+        </div>
+
+    </div><!--end row-->
        
 <hr>
 

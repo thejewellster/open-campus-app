@@ -33,6 +33,11 @@ a:hover{
    font-weight: 300;
 }
 
+hr{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 
 /*<--------------------headers----------------------->*/
 
@@ -1062,6 +1067,7 @@ input[type="button"]:visited
 max-height: 200px;
 overflow: auto;
 padding: 10px;
+font-size: 12px;
 }
 
 .btn-profile-dropdown{

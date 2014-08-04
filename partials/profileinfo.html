@@ -674,7 +674,27 @@
 			</label>
 			<textarea type="text" rows="4" style="color: #000; font-size: 12px; font-family: Helvetica; width=100%;" value="" placeholder="Tell everyone a little bit about yourself" name="about-me" class="profile-form-field" id="about-me" ng-model="profile.about"></textarea>
 			</div>
-			
+		</div>
+
+		<div class="row">
+			<div class="col-xs-12">
+			<img src="../img/wrench.png" width="20" alt="">
+				<div class="btn-group" style="width:90%;">
+					<select class="btn btn-profile-dropdown" id="dropdown-list" role="menu" ng-model="profile.skillset">
+						<option value="">Select Your Skill Set</option>
+						<option>Designer</option>
+						<option>Photographer/Film Maker</option>
+						<option>Developer</option>
+						<option>Social Media</option>
+						<option>Engineer</option>
+						<option>Finance Guru</option>
+						<option>Writer/Blogger</option>
+						<option>Performer</option>
+						<option>Sales/Business Strategy</option>
+						<option>Tutor</option>
+					</select>
+				</div>
+			</div>
 		</div>
 		
 		<div class="row">
