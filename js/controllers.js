@@ -69,25 +69,15 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
 
                console.log($scope.jobs);
 
-
-               wsh.exec({
-                 code: function() {
-                   return fs.Segfaultx64.test.charge(args);
-                 },
-                 args: {
-                   token: token.id,
-                   job: $scope.job
-                 },
-                 success: function(receipt) {
-                  console.log(receipt);
-                   if (receipt.error) {
-                     return alert;
-                   }
-                  window.location = ('http://opencampusjobs.com/partials/post-confirm.html');
-                 }, 
-                 failure: function(a) {
-                  console.log(a)
+               $.post('http://104.131.203.38:3000/', {
+                token: token.id,
+                job: $scope.job
+               }, function (receipt) {
+                console.log(receipt);
+                 if (receipt.error) {
+                   return alert;
                  }
+                window.location = ('http://opencampusjobs.com/partials/post-confirm.html');
                });
             }
          });
