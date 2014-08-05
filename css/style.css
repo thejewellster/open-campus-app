@@ -883,7 +883,8 @@ ul.footer-links li a:hover{
 }
 
 .thumbnail-container{
-  margin: 0 auto;
+  margin-top: 5px;
+  margin-bottom:5px;
   width: 100%;
   border: 1px solid #ededed;
   border-radius: 10px;
@@ -892,6 +893,9 @@ ul.footer-links li a:hover{
 
 .thumbnail-inner{
   padding: 15px;
+  background-color: #f3f3f3;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 
 
@@ -958,9 +962,6 @@ ul.personal-info li{
 }
 
 
-.bottom-half{
-  border-top: 2px dotted #ededed;
-}
 
 .name{
   text-align: center;
@@ -983,8 +984,9 @@ ul.personal-info li{
   margin-top: 10px;
   width: 100%;
   height: auto;
-  border: 2px solid #d7b333;
+  border: 2px solid #5cb85c;
   border-radius: 10px;
+  background-color: #fff;
 }
 
 .job-template-oc{
@@ -994,6 +996,7 @@ ul.personal-info li{
   height: auto;
   border: 2px solid #5cb85c;
   border-radius: 10px;
+  background-color: #fff;
 }
 
 .portfolio{

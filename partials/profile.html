@@ -31,7 +31,7 @@
 						About
 					</button>
 					<span ng-repeat="(skill, attrs) in profile.skills">
-						<button type="button" class="btn skill-btns btn-skill-level-3" ng-click="show(skill)" ng-show="skill == 'Academic Accomplishments'">
+						<button type="button" class="btn skill-btns btn-skill-level-1" ng-click="show(skill)" ng-show="skill == 'Academic Accomplishments'">
 							<img src="img/graduates.png" width="30" alt="">
 						</button>
 						<button class="btn skill-btns btn-skill-level-1"  ng-click="show(skill)" ng-show="skill == 'Leadership'">
@@ -51,7 +51,7 @@
 
 			<div class="bottom-half">
 				<div ng-show="shown === 'about'">
-					<div ng-class="{'job-template-college': skill === 'Academic Accomplishments', 'job-template-oc': skill !== 'Academic Accomplishments'}">
+					<div ng-class="{'job-template-oc': skill === 'Academic Accomplishments', 'job-template-oc': skill !== 'Academic Accomplishments'}">
 						<div class="row">
 							<div class="col-xs-12">
 								<div class="job-snipbit">About Me</div>
