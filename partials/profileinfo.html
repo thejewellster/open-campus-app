@@ -7,684 +7,683 @@
 </div>
 
 <div class="row">
-	<h1>Create/Edit Your Profile <a href="http://opencampusjobs.com/app.html#/logout" style="color: #807f80;"><button class="btn btn-sm round-gold-btn pull-right">Log Out</button></a>
+	<h1>Student Profile <a href="http://opencampusjobs.com/app.html#/logout" style="color: #807f80;"><button class="btn btn-sm round-gold-btn pull-right">Log Out</button></a>
     <a href="http://opencampusjobs.com/app.html#/jobs" style="color: #807f80;"><button class="btn btn-sm round-green-btn pull-right">Pinpoint a Job</button></a></h1>
     <hr>
 
 <div class="col-md-8">
 		
 	<div class="alert alert-danger" ng-show="badin">Please fill out all fields</div>
-	<form class="form-horizontal" ng-submit="sub()">
-		
+		<form class="form-horizontal" ng-submit="sub()">
 		<div class="row">
-			<div class="col-xs-12 col-sm-6">
-				<label for="f-name">
-				</label>
-				<input type="text" value="" placeholder="First Name" name="f-name" class="profile-form-field" id="f-name" ng-model="profile.name">
-			</div>
-
-			<div class="col-xs-12 col-sm-6">
-				<label for="l-name">
-				</label>
-				<input type="text" value="" placeholder="Last Name" name="l-name" class="profile-form-field" id="l-name" ng-model="profile.lname">
-			</div>
+		<h2>Account Info</h2>
 		</div>
+		
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
+					<label for="f-name">First Name
+					</label>
+					<input type="text" value="" placeholder="First Name" name="f-name" class="profile-form-field" id="f-name" ng-model="profile.name">
+				</div>
+
+				<div class="col-xs-12 col-sm-6">
+					<label for="l-name">Last Name
+					</label>
+					<input type="text" value="" placeholder="Last Name" name="l-name" class="profile-form-field" id="l-name" ng-model="profile.lname">
+				</div>
+			</div>
 			
 
-		<div class="row" style="padding: 15px 0;">
-			<div class="col-xs-12 col-sm-4">
-				<!-- Single button -->
-				<img src="../img/graduates.png" width="20" alt=""><div class="btn-group" style="width:90%;">
-				  <select class="btn btn-profile-dropdown" id="dropdown-list" role="menu" ng-model="profile.college">
-					<option>Alfred University
-				    </option><option>Albany College of Pharmacy and Health Sciences
-				    </option><option>Albany Law School
-				    </option><option>Albany Medical College
-				    </option><option>Albertus Magnus College
-				    </option><option>Albright College
-				    </option><option>Alfred University
-				    </option><option>Alvernia College
-				    </option><option>Amherst College
-				    </option><option>Andover Newton Theological School 
-				    </option><option>Antioch University-New England
-				    </option><option>Assumption College 
-				    </option><option>Atlantic Union College 
-				    </option><option>Bank Street College of Education
-				    </option><option>Bard College
-				    </option><option>Bard College at Simon's Rock 
-				    </option><option>Barnard College
-				    </option><option>Bates College
-				    </option><option>Bay Path College 
-				    </option><option>Beal College
-				    </option><option>Becker College 
-				    </option><option>Benjamin Franklin Institute of Technology 
-				    </option><option>Bennington College
-				    </option><option>Bentley University 
-				    </option><option>Berkeley College
-				    </option><option>Berklee College of Music 
-				    </option><option>Bernard M Baruch College, CUNY
-				    </option><option>Binghamton University, State University of New York
-				    </option><option>Bloomsburg University of Pennsylvania
-				    </option><option>Boricua College
-				    </option><option>Boston Architectural College 
-				    </option><option>Boston College 
-				    </option><option>Boston University 
-				    </option><option>Bowdoin College
-				    </option><option>Brandeis University 
-				    </option><option>Briarcliffe College
-				    </option><option>Bridgewater State College 
-				    </option><option>Brooklyn College
-				    </option><option>Brooklyn Law School
-				    </option><option>Brown University
-				    </option><option>Bryant University
-				    </option><option>Bryn Athyn College of the New Church
-				    </option><option>Bryn Mawr College
-				    </option><option>Bucknell University
-				    </option><option>Buffalo State College
-				    </option><option>Burlington College
-				    </option><option>California University of Pennsylvania
-				    </option><option>Cambridge College 
-				    </option><option>Canisius College
-				    </option><option>Carlow College
-				    </option><option>Castleton State College
-				    </option><option>Cazenovia College
-				    </option><option>Cedar Crest College
-				    </option><option>Central Connecticut State University
-				    </option><option>Champlain College
-				    </option><option>Charter Oak State College
-				    </option><option>Chatham College
-				    </option><option>Chestnut Hill College
-				    </option><option>Clarion University of Pennsylvania
-				    </option><option>Clark University 
-				    </option><option>Clarkson University
-				    </option><option>Colby College
-				    </option><option>Colby-Sawyer College
-				    </option><option>Colgate University
-				    </option><option>College of Mount Saint Vincent
-				    </option><option>College of St. Joseph
-				    </option><option>College of Staten Island
-				    </option><option>College of the Atlantic
-				    </option><option>College of the Holy Cross 
-				    </option><option>Columbia University
-				    </option><option>Concordia College-New York
-				    </option><option>Connecticut College
-				    </option><option>Cornell University
-				    </option><option>CUNY School of Law
-				    </option><option>D'Youville College
-				    </option><option>Daemen College
-				    </option><option>Dartmouth College
-				    </option><option>Davis College
-				    </option><option>De Sales University
-				    </option><option>Dean College 
-				    </option><option>Delaware Valley College of Science and Agriculture
-				    </option><option>Dickinson College
-				    </option><option>Drexel University
-				    </option><option>Eastern Connecticut State University
-				    </option><option>Eastern Nazarene College 
-				    </option><option>Elmira College
-				    </option><option>Elms College 
-				    </option><option>Emerson College 
-				    </option><option>Emmanuel College 
-				    </option><option>Endicott College 
-				    </option><option>Episcopal Divinity School 
-				    </option><option>Fairfield University
-				    </option><option>Farmingdale State College
-				    </option><option>Fashion Institute of Technology
-				    </option><option>Fisher College 
-				    </option><option>Fitchburg State University 
-				    </option><option>Fordham University
-				    </option><option>Framingham State College 
-				    </option><option>Franklin & Marshall College
-				    </option><option>Franklin Pierce University
-				    </option><option>Franklin W. Olin College of Engineering 
-				    </option><option>Gannon University
-				    </option><option>Goddard College
-				    </option><option>Goodwin College
-				    </option><option>Gordon College 
-				    </option><option>Granite State College
-				    </option><option>Green Mountain College
-				    </option><option>Grove City College
-				    </option><option>Gwynedd-Mercy College
-				    </option><option>Hamilton College
-				    </option><option>Hampshire College 
-				    </option><option>Harcum College
-				    </option><option>Harrisburg University of Science & Technology
-				    </option><option>Hartwick College
-				    </option><option>Harvard University 
-				    </option><option>Haverford College
-				    </option><option>Hebrew College 
-				    </option><option>Hilbert College
-				    </option><option>Hobart and William Smith Colleges
-				    </option><option>Hofstra University
-				    </option><option>Holy Family University
-				    </option><option>Houghton College
-				    </option><option>Hunter College, CUNY
-				    </option><option>Husson University
-				    </option><option>Immaculata University
-				    </option><option>Indiana University of Pennsylvania
-				    </option><option>Iona College
-				    </option><option>Ithaca College
-				    </option><option>John Jay College of Criminal Justice
-				    </option><option>Johnson & Wales University-Providence
-				    </option><option>Johnson State College
-				    </option><option>Juniata College
-				    </option><option>Keene State College
-				    </option><option>Keuka College
-				    </option><option>King's College
-				    </option><option>Kutztown University of Pennyslvania
-				    </option><option>La Roche College
-				    </option><option>Landmark College
-				    </option><option>LaSalle University
-				    </option><option>Lasell College 
-				    </option><option>Le Moyne College
-				    </option><option>Lebanon Valley College
-				    </option><option>Lehigh University
-				    </option><option>Lehman College, CUNY
-				    </option><option>Lesley University 
-				    </option><option>Long Island University
-				    </option><option>Lyndon State College
-				    </option><option>Maine College of Art
-				    </option><option>Maine Maritime Academy
-				    </option><option>Manhattan College
-				    </option><option>Manhattan School of Music
-				    </option><option>Manhattanville College
-				    </option><option>Manor College
-				    </option><option>Mansfield University of Pennsylvania
-				    </option><option>Marist College
-				    </option><option>Marlboro College
-				    </option><option>Marymount Manhattan College
-				    </option><option>Massachusetts College of Art and Design 
-				    </option><option>Massachusetts College of Liberal Arts 
-				    </option><option>Massachusetts College of Pharmacy & Health Sciences 
-				    </option><option>Massachusetts Institute of Technology 
-				    </option><option>Medaille College
-				    </option><option>Medgar Evers College
-				    </option><option>Mercy College
-				    </option><option>Mercyhurst College
-				    </option><option>Merrimack College 
-				    </option><option>Messiah College
-				    </option><option>Metropolitan College of New York
-				    </option><option>Middlebury College
-				    </option><option>Millersville University of Pennsylvania
-				    </option><option>Mitchell College
-				    </option><option>Monroe College
-				    </option><option>Montserrat College of Art 
-				    </option><option>Mount Aloysius College
-				    </option><option>Mount Holyoke College 
-				    </option><option>Mount Saint Mary College
-				    </option><option>Muhlenberg College
-				    </option><option>Nazareth College
-				    </option><option>Neumann College
-				    </option><option>New England College
-				    </option><option>New England College of Optometry 
-				    </option><option>New England Conservatory of Music 
-				    </option><option>New England Law-Boston 
-				    </option><option>New England School of Communications
-				    </option><option>New Hampshire Institute of Art
-				    </option><option>New York City College of Technology, CUNY
-				    </option><option>New York College of Podiatric Medicine
-				    </option><option>New York Institute of Technology
-				    </option><option>New York Law School
-				    </option><option>New York Medical College
-				    </option><option>New York School of Interior Design
-				    </option><option>New York University
-				    </option><option>Newbury College 
-				    </option><option>Niagara University
-				    </option><option>Nichols College 
-				    </option><option>Northeastern University 
-				    </option><option>Norwich University
-				    </option><option>Nyack College
-				    </option><option>Pace University
-				    </option><option>Paul Smith's College
-				    </option><option>Peirce College
-				    </option><option>Penn State Abington
-				    </option><option>Penn State Altoona
-				    </option><option>Penn State Beaver
-				    </option><option>Penn State Berks
-				    </option><option>Penn State Brandywine
-				    </option><option>Penn State Capital College
-				    </option><option>Penn State DuBois
-				    </option><option>Penn State Erie
-				    </option><option>Penn State Fayette
-				    </option><option>Penn State Greater Allegheny
-				    </option><option>Penn State Hazleton
-				    </option><option>Penn State Lehigh Valley
-				    </option><option>Penn State Mont Alto
-				    </option><option>Penn State New Kensington
-				    </option><option>Penn State Schuylkill
-				    </option><option>Penn State Shenango
-				    </option><option>Penn State Wilkes-Barre
-				    </option><option>Penn State Worthington Scranton
-				    </option><option>Penn State York
-				    </option><option>Pennsylvania State University
-				    </option><option>Pine Manor College 
-				    </option><option>Plymouth State University
-				    </option><option>Point Park University
-				    </option><option>Pratt Institute
-				    </option><option>Providence College
-				    </option><option>Purchase College, State University of New York
-				    </option><option>Queens College, City University of New York
-				    </option><option>Quinnipiac University
-				    </option><option>Regis College 
-				    </option><option>Rensselaer Polytechnic Institute
-				    </option><option>Rhode Island School of Design
-				    </option><option>Rivier University
-				    </option><option>Robert Morris University
-				    </option><option>Roberts Wesleyan College
-				    </option><option>Rochester Institute of Technology
-				    </option><option>Rosemont College
-				    </option><option>Sacred Heart University
-				    </option><option>Saint Anselm College
-				    </option><option>Saint Francis University
-				    </option><option>Saint Joseph's College of Maine
-				    </option><option>Saint Joseph's University
-				    </option><option>Saint Vincent College
-				    </option><option>Salem State University 
-				    </option><option>Salus University
-				    </option><option>Sarah Lawrence College
-				    </option><option>School of the Museum of Fine Arts 
-				    </option><option>Shippensburg University of Pennsylvania
-				    </option><option>Siena College
-				    </option><option>Simmons College 
-				    </option><option>Skidmore College
-				    </option><option>Slippery Rock University
-				    </option><option>Southern Connecticut State University
-				    </option><option>Southern New Hampshire University
-				    </option><option>Southern Vermont College
-				    </option><option>Springfield College 
-				    </option><option>St Joseph School of Nursing
-				    </option><option>St. Bonaventure University
-				    </option><option>St. Francis College
-				    </option><option>St. John Fisher College
-				    </option><option>St. John's University
-				    </option><option>St. Joseph's College
-				    </option><option>St. Lawrence University
-				    </option><option>St. Michael's College
-				    </option><option>St. Vincent's College
-				    </option><option>State University of New York at Fredonia
-				    </option><option>State University of New York at New Paltz
-				    </option><option>State University of New York at Oswego
-				    </option><option>State University of New York College at Plattsburgh
-				    </option><option>State University of New York Institute of Technology
-				    </option><option>Sterling College
-				    </option><option>Stonehill College 
-				    </option><option>Stony Brook University
-				    </option><option>Suffolk University 
-				    </option><option>SUNY Canton
-				    </option><option>SUNY Cobleskill
-				    </option><option>SUNY College at Old Westbury
-				    </option><option>SUNY College at Oneonta
-				    </option><option>SUNY College of Environmental Science and Forestry
-				    </option><option>SUNY College of Optometry
-				    </option><option>SUNY College of Technology at Alfred
-				    </option><option>SUNY Cortland
-				    </option><option>SUNY Delhi
-				    </option><option>SUNY Geneseo
-				    </option><option>SUNY Maritime College
-				    </option><option>SUNY Upstate Medical University
-				    </option><option>Susquehanna University
-				    </option><option>Syracuse University
-				    </option><option>Temple University
-				    </option><option>The City College of New York
-				    </option><option>The College at Brockport
-				    </option><option>The College of New Rochelle
-				    </option><option>The College of Saint Rose
-				    </option><option>The Cooper Union for the Advancement of Science and Art
-				    </option><option>The Juilliard School
-				    </option><option>The New School
-				    </option><option>The Rockefeller University
-				    </option><option>The Sage Colleges
-				    </option><option>The State University of New York at Potsdam
-				    </option><option>The University of Scranton
-				    </option><option>Thiel College
-				    </option><option>Thomas College
-				    </option><option>Thomas More College of Liberal Arts
-				    </option><option>Trinity College
-				    </option><option>Tufts University 
-				    </option><option>Union College
-				    </option><option>United States Coast Guard Academy
-				    </option><option>United States Merchant Marine Academy
-				    </option><option>United States Military Academy
-				    </option><option>Unity College
-				    </option><option>University at Albany
-				    </option><option>University at Buffalo
-				    </option><option>University of Bridgeport
-				    </option><option>University of Connecticut
-				    </option><option>University of Hartford
-				    </option><option>University of Maine
-				    </option><option>University of Maine at Augusta
-				    </option><option>University of Maine at Farmington
-				    </option><option>University of Maine at Fort Kent
-				    </option><option>University of Maine at Machias
-				    </option><option>University of Maine at Presque Isle
-				    </option><option>University of Massachusetts - Boston 
-				    </option><option>University of Massachusetts - Dartmouth 
-				    </option><option>University of Massachusetts - Lowell 
-				    </option><option>University of New England
-				    </option><option>University of New Hampshire at Manchester
-				    </option><option>University of New Hampshire-Main Campus
-				    </option><option>University of New Haven
-				    </option><option>University of Pennsylvania
-				    </option><option>University of Pittsburgh
-				    </option><option>University of Pittsburgh at Bradford
-				    </option><option>University of Pittsburgh at Greensburg
-				    </option><option>University of Pittsburgh at Johnstown
-				    </option><option>University of Pittsburgh at Titusville
-				    </option><option>University of Rochester
-				    </option><option>University of Saint Joseph
-				    </option><option>University of Southern Maine
-				    </option><option>University of the Sciences in Philadelphia
-				    </option><option>University of Vermont
-				    </option><option>Utica College
-				    </option><option>Vassar College
-				    </option><option>Vaughn College of Aeronautics and Technology
-				    </option><option>Vermont College of Fine Arts 
-				    </option><option>Vermont Law School
-				    </option><option>Vermont Technical College
-				    </option><option>Villa Maria College
-				    </option><option>Wagner College
-				    </option><option>Washington and Jefferson College
-				    </option><option>Webb Institute
-				    </option><option>Wells College
-				    </option><option>Wentworth Institute of Technology 
-				    </option><option>Wesleyan University
-				    </option><option>West Chester University of Pennsylvania
-				    </option><option>Western Connecticut State University
-				    </option><option>Western New England University 
-				    </option><option>Wheelock College 
-				    </option><option>Wilkes University
-				    </option><option>Williams College 
-				    </option><option>Wilson College
-				    </option><option>Worcester Polytechnic Institute 
-				    </option><option>Worcester State University 
-				    </option><option>Yale University
-				    </option><option>Yeshiva University
-				    </option><option>York College of Pennsylvania
-				    </option><option>York College, City University of New York</option>
-				</select>
-			</div>
-			</div>
-
-			<div class="col-xs-12 col-sm-4">
-				<img src="../img/book.png" width="20" alt=""><div class="btn-group" style="width:90%;">
-				  <select class="btn btn-profile-dropdown" id="dropdown-list" role="menu" ng-model="profile.major">
-				  	<option>Business, Finance, Management</option>
-				  	<option>Biomedical Engineering</option>
-				  	<option>Communications</option>
-				  	<option>Computer Science</option>
-				  	<option>Computer Systems Engineering</option>
-				  	<option>Dance</option>
-				  	<option>Education</option>
-				  	<option>Electrical Engineering</option>
-				  	<option>Electronic Media Arts</option>
-				  	<option>English</option>
-				  	<option>Foreign Lanugage</option>
-				  	<option>IT & Tech</option>
-				  	<option>Math</option>
-				  	<option>Mechanical Engineering</option>
-				  	<option>Studio Art</option>
-				  	<option>Social Sciences</option>
-				  	<option>Theater</option>
-				  	<option>Music</option>
-				  	<option>Religion & Philosophy</option>
-				  	<option>Pre-Med</option>
-				  	<option>Pre-Law</option>
-				  </select>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
+					<!-- Single button -->
+					<label for="">College / University</label>
+					<div class="btn-group profile-form-field">
+					  	<select class="btn btn-profile-dropdown" id="dropdown-list" role="menu" ng-model="profile.college">
+						<option>Alfred University
+					    </option><option>Albany College of Pharmacy and Health Sciences
+					    </option><option>Albany Law School
+					    </option><option>Albany Medical College
+					    </option><option>Albertus Magnus College
+					    </option><option>Albright College
+					    </option><option>Alfred University
+					    </option><option>Alvernia College
+					    </option><option>Amherst College
+					    </option><option>Andover Newton Theological School 
+					    </option><option>Antioch University-New England
+					    </option><option>Assumption College 
+					    </option><option>Atlantic Union College 
+					    </option><option>Bank Street College of Education
+					    </option><option>Bard College
+					    </option><option>Bard College at Simon's Rock 
+					    </option><option>Barnard College
+					    </option><option>Bates College
+					    </option><option>Bay Path College 
+					    </option><option>Beal College
+					    </option><option>Becker College 
+					    </option><option>Benjamin Franklin Institute of Technology 
+					    </option><option>Bennington College
+					    </option><option>Bentley University 
+					    </option><option>Berkeley College
+					    </option><option>Berklee College of Music 
+					    </option><option>Bernard M Baruch College, CUNY
+					    </option><option>Binghamton University, State University of New York
+					    </option><option>Bloomsburg University of Pennsylvania
+					    </option><option>Boricua College
+					    </option><option>Boston Architectural College 
+					    </option><option>Boston College 
+					    </option><option>Boston University 
+					    </option><option>Bowdoin College
+					    </option><option>Brandeis University 
+					    </option><option>Briarcliffe College
+					    </option><option>Bridgewater State College 
+					    </option><option>Brooklyn College
+					    </option><option>Brooklyn Law School
+					    </option><option>Brown University
+					    </option><option>Bryant University
+					    </option><option>Bryn Athyn College of the New Church
+					    </option><option>Bryn Mawr College
+					    </option><option>Bucknell University
+					    </option><option>Buffalo State College
+					    </option><option>Burlington College
+					    </option><option>California University of Pennsylvania
+					    </option><option>Cambridge College 
+					    </option><option>Canisius College
+					    </option><option>Carlow College
+					    </option><option>Castleton State College
+					    </option><option>Cazenovia College
+					    </option><option>Cedar Crest College
+					    </option><option>Central Connecticut State University
+					    </option><option>Champlain College
+					    </option><option>Charter Oak State College
+					    </option><option>Chatham College
+					    </option><option>Chestnut Hill College
+					    </option><option>Clarion University of Pennsylvania
+					    </option><option>Clark University 
+					    </option><option>Clarkson University
+					    </option><option>Colby College
+					    </option><option>Colby-Sawyer College
+					    </option><option>Colgate University
+					    </option><option>College of Mount Saint Vincent
+					    </option><option>College of St. Joseph
+					    </option><option>College of Staten Island
+					    </option><option>College of the Atlantic
+					    </option><option>College of the Holy Cross 
+					    </option><option>Columbia University
+					    </option><option>Concordia College-New York
+					    </option><option>Connecticut College
+					    </option><option>Cornell University
+					    </option><option>CUNY School of Law
+					    </option><option>D'Youville College
+					    </option><option>Daemen College
+					    </option><option>Dartmouth College
+					    </option><option>Davis College
+					    </option><option>De Sales University
+					    </option><option>Dean College 
+					    </option><option>Delaware Valley College of Science and Agriculture
+					    </option><option>Dickinson College
+					    </option><option>Drexel University
+					    </option><option>Eastern Connecticut State University
+					    </option><option>Eastern Nazarene College 
+					    </option><option>Elmira College
+					    </option><option>Elms College 
+					    </option><option>Emerson College 
+					    </option><option>Emmanuel College 
+					    </option><option>Endicott College 
+					    </option><option>Episcopal Divinity School 
+					    </option><option>Fairfield University
+					    </option><option>Farmingdale State College
+					    </option><option>Fashion Institute of Technology
+					    </option><option>Fisher College 
+					    </option><option>Fitchburg State University 
+					    </option><option>Fordham University
+					    </option><option>Framingham State College 
+					    </option><option>Franklin & Marshall College
+					    </option><option>Franklin Pierce University
+					    </option><option>Franklin W. Olin College of Engineering 
+					    </option><option>Gannon University
+					    </option><option>Goddard College
+					    </option><option>Goodwin College
+					    </option><option>Gordon College 
+					    </option><option>Granite State College
+					    </option><option>Green Mountain College
+					    </option><option>Grove City College
+					    </option><option>Gwynedd-Mercy College
+					    </option><option>Hamilton College
+					    </option><option>Hampshire College 
+					    </option><option>Harcum College
+					    </option><option>Harrisburg University of Science & Technology
+					    </option><option>Hartwick College
+					    </option><option>Harvard University 
+					    </option><option>Haverford College
+					    </option><option>Hebrew College 
+					    </option><option>Hilbert College
+					    </option><option>Hobart and William Smith Colleges
+					    </option><option>Hofstra University
+					    </option><option>Holy Family University
+					    </option><option>Houghton College
+					    </option><option>Hunter College, CUNY
+					    </option><option>Husson University
+					    </option><option>Immaculata University
+					    </option><option>Indiana University of Pennsylvania
+					    </option><option>Iona College
+					    </option><option>Ithaca College
+					    </option><option>John Jay College of Criminal Justice
+					    </option><option>Johnson & Wales University-Providence
+					    </option><option>Johnson State College
+					    </option><option>Juniata College
+					    </option><option>Keene State College
+					    </option><option>Keuka College
+					    </option><option>King's College
+					    </option><option>Kutztown University of Pennyslvania
+					    </option><option>La Roche College
+					    </option><option>Landmark College
+					    </option><option>LaSalle University
+					    </option><option>Lasell College 
+					    </option><option>Le Moyne College
+					    </option><option>Lebanon Valley College
+					    </option><option>Lehigh University
+					    </option><option>Lehman College, CUNY
+					    </option><option>Lesley University 
+					    </option><option>Long Island University
+					    </option><option>Lyndon State College
+					    </option><option>Maine College of Art
+					    </option><option>Maine Maritime Academy
+					    </option><option>Manhattan College
+					    </option><option>Manhattan School of Music
+					    </option><option>Manhattanville College
+					    </option><option>Manor College
+					    </option><option>Mansfield University of Pennsylvania
+					    </option><option>Marist College
+					    </option><option>Marlboro College
+					    </option><option>Marymount Manhattan College
+					    </option><option>Massachusetts College of Art and Design 
+					    </option><option>Massachusetts College of Liberal Arts 
+					    </option><option>Massachusetts College of Pharmacy & Health Sciences 
+					    </option><option>Massachusetts Institute of Technology 
+					    </option><option>Medaille College
+					    </option><option>Medgar Evers College
+					    </option><option>Mercy College
+					    </option><option>Mercyhurst College
+					    </option><option>Merrimack College 
+					    </option><option>Messiah College
+					    </option><option>Metropolitan College of New York
+					    </option><option>Middlebury College
+					    </option><option>Millersville University of Pennsylvania
+					    </option><option>Mitchell College
+					    </option><option>Monroe College
+					    </option><option>Montserrat College of Art 
+					    </option><option>Mount Aloysius College
+					    </option><option>Mount Holyoke College 
+					    </option><option>Mount Saint Mary College
+					    </option><option>Muhlenberg College
+					    </option><option>Nazareth College
+					    </option><option>Neumann College
+					    </option><option>New England College
+					    </option><option>New England College of Optometry 
+					    </option><option>New England Conservatory of Music 
+					    </option><option>New England Law-Boston 
+					    </option><option>New England School of Communications
+					    </option><option>New Hampshire Institute of Art
+					    </option><option>New York City College of Technology, CUNY
+					    </option><option>New York College of Podiatric Medicine
+					    </option><option>New York Institute of Technology
+					    </option><option>New York Law School
+					    </option><option>New York Medical College
+					    </option><option>New York School of Interior Design
+					    </option><option>New York University
+					    </option><option>Newbury College 
+					    </option><option>Niagara University
+					    </option><option>Nichols College 
+					    </option><option>Northeastern University 
+					    </option><option>Norwich University
+					    </option><option>Nyack College
+					    </option><option>Pace University
+					    </option><option>Paul Smith's College
+					    </option><option>Peirce College
+					    </option><option>Penn State Abington
+					    </option><option>Penn State Altoona
+					    </option><option>Penn State Beaver
+					    </option><option>Penn State Berks
+					    </option><option>Penn State Brandywine
+					    </option><option>Penn State Capital College
+					    </option><option>Penn State DuBois
+					    </option><option>Penn State Erie
+					    </option><option>Penn State Fayette
+					    </option><option>Penn State Greater Allegheny
+					    </option><option>Penn State Hazleton
+					    </option><option>Penn State Lehigh Valley
+					    </option><option>Penn State Mont Alto
+					    </option><option>Penn State New Kensington
+					    </option><option>Penn State Schuylkill
+					    </option><option>Penn State Shenango
+					    </option><option>Penn State Wilkes-Barre
+					    </option><option>Penn State Worthington Scranton
+					    </option><option>Penn State York
+					    </option><option>Pennsylvania State University
+					    </option><option>Pine Manor College 
+					    </option><option>Plymouth State University
+					    </option><option>Point Park University
+					    </option><option>Pratt Institute
+					    </option><option>Providence College
+					    </option><option>Purchase College, State University of New York
+					    </option><option>Queens College, City University of New York
+					    </option><option>Quinnipiac University
+					    </option><option>Regis College 
+					    </option><option>Rensselaer Polytechnic Institute
+					    </option><option>Rhode Island School of Design
+					    </option><option>Rivier University
+					    </option><option>Robert Morris University
+					    </option><option>Roberts Wesleyan College
+					    </option><option>Rochester Institute of Technology
+					    </option><option>Rosemont College
+					    </option><option>Sacred Heart University
+					    </option><option>Saint Anselm College
+					    </option><option>Saint Francis University
+					    </option><option>Saint Joseph's College of Maine
+					    </option><option>Saint Joseph's University
+					    </option><option>Saint Vincent College
+					    </option><option>Salem State University 
+					    </option><option>Salus University
+					    </option><option>Sarah Lawrence College
+					    </option><option>School of the Museum of Fine Arts 
+					    </option><option>Shippensburg University of Pennsylvania
+					    </option><option>Siena College
+					    </option><option>Simmons College 
+					    </option><option>Skidmore College
+					    </option><option>Slippery Rock University
+					    </option><option>Southern Connecticut State University
+					    </option><option>Southern New Hampshire University
+					    </option><option>Southern Vermont College
+					    </option><option>Springfield College 
+					    </option><option>St Joseph School of Nursing
+					    </option><option>St. Bonaventure University
+					    </option><option>St. Francis College
+					    </option><option>St. John Fisher College
+					    </option><option>St. John's University
+					    </option><option>St. Joseph's College
+					    </option><option>St. Lawrence University
+					    </option><option>St. Michael's College
+					    </option><option>St. Vincent's College
+					    </option><option>State University of New York at Fredonia
+					    </option><option>State University of New York at New Paltz
+					    </option><option>State University of New York at Oswego
+					    </option><option>State University of New York College at Plattsburgh
+					    </option><option>State University of New York Institute of Technology
+					    </option><option>Sterling College
+					    </option><option>Stonehill College 
+					    </option><option>Stony Brook University
+					    </option><option>Suffolk University 
+					    </option><option>SUNY Canton
+					    </option><option>SUNY Cobleskill
+					    </option><option>SUNY College at Old Westbury
+					    </option><option>SUNY College at Oneonta
+					    </option><option>SUNY College of Environmental Science and Forestry
+					    </option><option>SUNY College of Optometry
+					    </option><option>SUNY College of Technology at Alfred
+					    </option><option>SUNY Cortland
+					    </option><option>SUNY Delhi
+					    </option><option>SUNY Geneseo
+					    </option><option>SUNY Maritime College
+					    </option><option>SUNY Upstate Medical University
+					    </option><option>Susquehanna University
+					    </option><option>Syracuse University
+					    </option><option>Temple University
+					    </option><option>The City College of New York
+					    </option><option>The College at Brockport
+					    </option><option>The College of New Rochelle
+					    </option><option>The College of Saint Rose
+					    </option><option>The Cooper Union for the Advancement of Science and Art
+					    </option><option>The Juilliard School
+					    </option><option>The New School
+					    </option><option>The Rockefeller University
+					    </option><option>The Sage Colleges
+					    </option><option>The State University of New York at Potsdam
+					    </option><option>The University of Scranton
+					    </option><option>Thiel College
+					    </option><option>Thomas College
+					    </option><option>Thomas More College of Liberal Arts
+					    </option><option>Trinity College
+					    </option><option>Tufts University 
+					    </option><option>Union College
+					    </option><option>United States Coast Guard Academy
+					    </option><option>United States Merchant Marine Academy
+					    </option><option>United States Military Academy
+					    </option><option>Unity College
+					    </option><option>University at Albany
+					    </option><option>University at Buffalo
+					    </option><option>University of Bridgeport
+					    </option><option>University of Connecticut
+					    </option><option>University of Hartford
+					    </option><option>University of Maine
+					    </option><option>University of Maine at Augusta
+					    </option><option>University of Maine at Farmington
+					    </option><option>University of Maine at Fort Kent
+					    </option><option>University of Maine at Machias
+					    </option><option>University of Maine at Presque Isle
+					    </option><option>University of Massachusetts - Boston 
+					    </option><option>University of Massachusetts - Dartmouth 
+					    </option><option>University of Massachusetts - Lowell 
+					    </option><option>University of New England
+					    </option><option>University of New Hampshire at Manchester
+					    </option><option>University of New Hampshire-Main Campus
+					    </option><option>University of New Haven
+					    </option><option>University of Pennsylvania
+					    </option><option>University of Pittsburgh
+					    </option><option>University of Pittsburgh at Bradford
+					    </option><option>University of Pittsburgh at Greensburg
+					    </option><option>University of Pittsburgh at Johnstown
+					    </option><option>University of Pittsburgh at Titusville
+					    </option><option>University of Rochester
+					    </option><option>University of Saint Joseph
+					    </option><option>University of Southern Maine
+					    </option><option>University of the Sciences in Philadelphia
+					    </option><option>University of Vermont
+					    </option><option>Utica College
+					    </option><option>Vassar College
+					    </option><option>Vaughn College of Aeronautics and Technology
+					    </option><option>Vermont College of Fine Arts 
+					    </option><option>Vermont Law School
+					    </option><option>Vermont Technical College
+					    </option><option>Villa Maria College
+					    </option><option>Wagner College
+					    </option><option>Washington and Jefferson College
+					    </option><option>Webb Institute
+					    </option><option>Wells College
+					    </option><option>Wentworth Institute of Technology 
+					    </option><option>Wesleyan University
+					    </option><option>West Chester University of Pennsylvania
+					    </option><option>Western Connecticut State University
+					    </option><option>Western New England University 
+					    </option><option>Wheelock College 
+					    </option><option>Wilkes University
+					    </option><option>Williams College 
+					    </option><option>Wilson College
+					    </option><option>Worcester Polytechnic Institute 
+					    </option><option>Worcester State University 
+					    </option><option>Yale University
+					    </option><option>Yeshiva University
+					    </option><option>York College of Pennsylvania
+					    </option><option>York College, City University of New York</option>
+					</select>
 				</div>
 			</div>
 
-			<div class="col-xs-12 col-sm-4">
-                <img src="../img/pinpoint.png" width="12" alt=""><div class="btn-group" style="width:90%;">
-                  <select class="btn btn-profile-dropdown" id="dropdown-list" role="menu" ng-model="profile.location">
-                    <option>Abington, PA</option>
-                    <option>Albany, NY</option>
-                    <option>Alfred, NY</option>
-                    <option>Allentown, PA</option>
-                    <option>Allentown, PA</option>
-                    <option>Altoona, PA</option>
-                    <option>Amherst, NY</option>
-                    <option>Amherst , MA</option>
-                    <option>Annandale-on-Hudson, NY</option>
-                    <option>Annville, PA</option>
-                    <option>Aston, PA</option>
-                    <option>Augusta, ME</option>
-                    <option>Aurora, NY</option>
-                    <option>Bangor, ME</option>
-                    <option>Bar Harbor, ME</option>
-                    <option>Beaver, PA</option>
-                    <option>Bennington, VT</option>
-                    <option>Berks, PA</option>
-                    <option>Bethlehem, PA</option>
-                    <option>Bethpage, NY</option>
-                    <option>Beverly , MA</option>
-                    <option>Biddeford, ME</option>
-                    <option>Bloomsburg, PA</option>
-                    <option>Boston, MA</option>
-                    <option>Bradford, PA</option>
-                    <option>Brandywine, PA</option>
-                    <option>Bridgeport, CT</option>
-                    <option>Bridgeport, CT</option>
-                    <option>Bridgewater , MA</option>
-                    <option>Brockport, NY</option>
-                    <option>Bronx, NY</option>
-                    <option>Bronxville, NY</option>
-                    <option>Brookline, MA</option>
-                    <option>Brooklyn, NY</option>
-                    <option>Brooklyn Heights, NY</option>
-                    <option>Brunswick, ME</option>
-                    <option>Bryn Athyn, PA</option>
-                    <option>Bryn Mawr, PA</option>
-                    <option>Buffalo, NY</option>
-                    <option>Buffalo, NY</option>
-                    <option>Burlington, VT</option>
-                    <option>California, PA</option>
-                    <option>Cambridge, MA</option>
-                    <option>Canton, NY</option>
-                    <option>Carlisle, PA</option>
-                    <option>Castine, ME</option>
-                    <option>Castleton, VT</option>
-                    <option>Cazenovia, NY</option>
-                    <option>Center Valley, PA</option>
-                    <option>Chambersburg, PA</option>
-                    <option>Cheektowaga, NY</option>
-                    <option>Chestnut Hill , MA</option>
-                    <option>Chicopee , MA</option>
-                    <option>Clarion, PA</option>
-                    <option>Clinton, NY</option>
-                    <option>Cobleskill, NY</option>
-                    <option>Colchester, VT</option>
-                    <option>Concord , NH</option>
-                    <option>Cortland, NY</option>
-                    <option>Craftsbury, VT</option>
-                    <option>Cresson, PA</option>
-                    <option>Danbury, CT</option>
-                    <option>Dartmouth , MA</option>
-                    <option>Delhi, NY</option>
-                    <option>Dobbs Ferry, NY</option>
-                    <option>Doylestown, PA</option>
-                    <option>DuBois, PA</option>
-                    <option>Dudley , MA</option>
-                    <option>Dunmore, PA</option>
-                    <option>Durham, NH</option>
-                    <option>East Hartford, CT</option>
-                    <option>Easton , MA</option>
-                    <option>Elkins Park, PA</option>
-                    <option>Elmira, NY</option>
-                    <option>Erie, PA</option>
-                    <option>Fairfield, CT</option>
-                    <option>Farmingdale, NY</option>
-                    <option>Farmington, ME</option>
-                    <option>Fayette, PA</option>
-                    <option>Fitchburg , MA</option>
-                    <option>Flushing, NY</option>
-                    <option>Fort Kent, ME</option>
-                    <option>Framingham, MA</option>
-                    <option>Franklin, MA</option>
-                    <option>Fredonia, NY</option>
-                    <option>Garden City, NY</option>
-                    <option>Geneseo, NY</option>
-                    <option>Geneva, NY</option>
-                    <option>Glen Cove, NY</option>
-                    <option>Great Barrington , MA</option>
-                    <option>Greensburg, PA</option>
-                    <option>Greenville, PA</option>
-                    <option>Grove City, PA</option>
-                    <option>Gwynedd Valley, PA</option>
-                    <option>Hamburg, NY</option>
-                    <option>Hamden, CT</option>
-                    <option>Hamilton, NY</option>
-                    <option>Hanover, NH</option>
-                    <option>Harrisburg, PA</option>
-                    <option>Hartford, CT</option>
-                    <option>Haverford, PA</option>
-                    <option>Hazleton, PA</option>
-                    <option>Hempstead, NY</option>
-                    <option>Henniker, NH</option>
-                    <option>Houghton, NY</option>
-                    <option>Huntingdon, PA</option>
-                    <option>Immaculata, PA</option>
-                    <option>Indiana, PA</option>
-                    <option>Ithaca, NY</option>
-                    <option>Jamaica, NY</option>
-                    <option>Jenkintown, PA</option>
-                    <option>Johnson, VT</option>
-                    <option>Johnson City, NY</option>
-                    <option>Johnstown, PA</option>
-                    <option>Keene, NH</option>
-                    <option>Keuka Park, NY</option>
-                    <option>Kings Point, NY</option>
-                    <option>Kutztown, PA</option>
-                    <option>Lancaster, PA</option>
-                    <option>Latrobe, PA</option>
-                    <option>Lehman, PA</option>
-                    <option>Lewisburg, PA</option>
-                    <option>Lewiston, ME</option>
-                    <option>Lewiston, NY</option>
-                    <option>Longmeadow, MA</option>
-                    <option>Loretto, PA</option>
-                    <option>Loudonville, NY</option>
-                    <option>Lowell, MA</option>
-                    <option>Lyndonville, VT</option>
-                    <option>Machias, ME</option>
-                    <option>Manchester, NH</option>
-                    <option>Mansfield, PA</option>
-                    <option>Marlboro, VT</option>
-                    <option>McKeesport, PA</option>
-                    <option>Mechanicsburg, PA</option>
-                    <option>Medford, MA</option>
-                    <option>Merrimack, NH</option>
-                    <option>Middlebury, VT</option>
-                    <option>Middletown, CT</option>
-                    <option>Millersville, PA</option>
-                    <option>Mont Alto, PA</option>
-                    <option>Montpelier, VT</option>
-                    <option>Moon Township, PA</option>
-                    <option>Nashua, NH</option>
-                    <option>Needham, MA</option>
-                    <option>New Britain, CT</option>
-                    <option>New Haven, CT</option>
-                    <option>New Kensington, PA</option>
-                    <option>New London, CT</option>
-                    <option>New London, NH</option>
-                    <option>New Paltz, NY</option>
-                    <option>New Rochelle, NY</option>
-                    <option>New York City, NY</option>
-                    <option>Newburgh, NY</option>
-                    <option>Newton, MA</option>
-                    <option>Newton Centre , MA</option>
-                    <option>North Adams, MA</option>
-                    <option>North Andover, MA</option>
-                    <option>Northfield, VT</option>
-                    <option>Nyack, NY</option>
-                    <option>Old Westbury, NY</option>
-                    <option>Oneonta, NY</option>
-                    <option>Orono, ME</option>
-                    <option>Oswego, NY</option>
-                    <option>Paul Smiths, NY</option>
-                    <option>Philadelphia, PA</option>
-                    <option>Pittsburgh, PA</option>
-                    <option>Plainfield, VT</option>
-                    <option>Plattsburgh, NY</option>
-                    <option>Plymouth, NH</option>
-                    <option>Portland, ME</option>
-                    <option>Potsdam, NY</option>
-                    <option>Poughkeepsie, NY</option>
-                    <option>Poultney, VT</option>
-                    <option>Presque Isle, ME</option>
-                    <option>Providence, RI</option>
-                    <option>Purchase, NY</option>
-                    <option>Putney, VT</option>
-                    <option>Queens, NY</option>
-                    <option>Quincy , MA</option>
-                    <option>Randolph Center, VT</option>
-                    <option>Reading, PA</option>
-                    <option>Rindge , NH</option>
-                    <option>Rochester, NY</option>
-                    <option>Rosemont, PA</option>
-                    <option>Rutland, VT</option>
-                    <option>Salem, MA</option>
-                    <option>Saratoga Springs, NY</option>
-                    <option>Schenectady, NY</option>
-                    <option>Schuylkill Haven, PA</option>
-                    <option>Scranton, PA</option>
-                    <option>Selinsgrove, PA</option>
-                    <option>Sharon, PA</option>
-                    <option>Shippensburg, PA</option>
-                    <option>Slippery Rock, PA</option>
-                    <option>Smithfield, RI</option>
-                    <option>South Hadley , MA</option>
-                    <option>South Lancaster, MA</option>
-                    <option>South Royalton, VT</option>
-                    <option>Springfield, MA</option>
-                    <option>St. Bonaventure, NY</option>
-                    <option>Standish, ME</option>
-                    <option>Staten Island, NY</option>
-                    <option>Stony Brook, NY</option>
-                    <option>Storrs, CT</option>
-                    <option>Syracuse, NY</option>
-                    <option>The Bronx, NY</option>
-                    <option>Throggs Neck, NY</option>
-                    <option>Titusville, PA</option>
-                    <option>Troy, NY</option>
-                    <option>Troy, NY</option>
-                    <option>Unity, ME</option>
-                    <option>University Park, PA</option>
-                    <option>Utica, NY</option>
-                    <option>Valhalla, NY</option>
-                    <option>Vestal, NY</option>
-                    <option>Waltham, MA</option>
-                    <option>Washington, PA</option>
-                    <option>Waterville, ME</option>
-                    <option>Wenham, MA</option>
-                    <option>West Chester, PA</option>
-                    <option>West Hartford, CT</option>
-                    <option>West Haven, CT</option>
-                    <option>West Point, NY</option>
-                    <option>Weston, MA</option>
-                    <option>Wilkes-Barre, PA</option>
-                    <option>Williamstown, MA</option>
-                    <option>Willimantic, CT</option>
-                    <option>Worcester, MA</option>
-                    <option>York, PA</option>
-          		</select>
-            </div>
-        </div>
-
-			
-		</div>
-
-		<div class="row">
-			<div class="col-xs-12">
-			<label for="about-me">
-			</label>
-			<textarea type="text" rows="4" style="color: #000; font-size: 12px; font-family: Helvetica; width=100%;" value="" placeholder="Tell everyone a little bit about yourself" name="about-me" class="profile-form-field" id="about-me" ng-model="profile.about"></textarea>
+				
+				<div class="col-xs-12 col-sm-6">
+					<label for="">Field of Study</label>
+					<div class="btn-group profile-form-field" >
+					  <select class="btn btn-profile-dropdown" id="dropdown-list" role="menu" ng-model="profile.major">
+					  	<option>Business, Finance, Management</option>
+					  	<option>Biomedical Engineering</option>
+					  	<option>Communications</option>
+					  	<option>Computer Science</option>
+					  	<option>Computer Systems Engineering</option>
+					  	<option>Dance</option>
+					  	<option>Education</option>
+					  	<option>Electrical Engineering</option>
+					  	<option>Electronic Media Arts</option>
+					  	<option>English</option>
+					  	<option>Foreign Lanugage</option>
+					  	<option>IT & Tech</option>
+					  	<option>Math</option>
+					  	<option>Mechanical Engineering</option>
+					  	<option>Studio Art</option>
+					  	<option>Social Sciences</option>
+					  	<option>Theater</option>
+					  	<option>Music</option>
+					  	<option>Religion & Philosophy</option>
+					  	<option>Pre-Med</option>
+					  	<option>Pre-Law</option>
+					  </select>
+					</div>
+				</div>
 			</div>
-		</div>
 
-		<div class="row">
-			<div class="col-xs-12">
-			<img src="../img/wrench.png" width="20" alt="">
-				<div class="btn-group" style="width:90%;">
+				
+			<div class="row">
+				<div class="col-xs-12 col-sm-6">
+	                <label for="">Current Location</label>
+	                <div class="btn-group profile-form-field" >
+	                  <select class="btn btn-profile-dropdown" id="dropdown-list" role="menu" ng-model="profile.location">
+	                    <option>Abington, PA</option>
+	                    <option>Albany, NY</option>
+	                    <option>Alfred, NY</option>
+	                    <option>Allentown, PA</option>
+	                    <option>Allentown, PA</option>
+	                    <option>Altoona, PA</option>
+	                    <option>Amherst, NY</option>
+	                    <option>Amherst , MA</option>
+	                    <option>Annandale-on-Hudson, NY</option>
+	                    <option>Annville, PA</option>
+	                    <option>Aston, PA</option>
+	                    <option>Augusta, ME</option>
+	                    <option>Aurora, NY</option>
+	                    <option>Bangor, ME</option>
+	                    <option>Bar Harbor, ME</option>
+	                    <option>Beaver, PA</option>
+	                    <option>Bennington, VT</option>
+	                    <option>Berks, PA</option>
+	                    <option>Bethlehem, PA</option>
+	                    <option>Bethpage, NY</option>
+	                    <option>Beverly , MA</option>
+	                    <option>Biddeford, ME</option>
+	                    <option>Bloomsburg, PA</option>
+	                    <option>Boston, MA</option>
+	                    <option>Bradford, PA</option>
+	                    <option>Brandywine, PA</option>
+	                    <option>Bridgeport, CT</option>
+	                    <option>Bridgeport, CT</option>
+	                    <option>Bridgewater , MA</option>
+	                    <option>Brockport, NY</option>
+	                    <option>Bronx, NY</option>
+	                    <option>Bronxville, NY</option>
+	                    <option>Brookline, MA</option>
+	                    <option>Brooklyn, NY</option>
+	                    <option>Brooklyn Heights, NY</option>
+	                    <option>Brunswick, ME</option>
+	                    <option>Bryn Athyn, PA</option>
+	                    <option>Bryn Mawr, PA</option>
+	                    <option>Buffalo, NY</option>
+	                    <option>Buffalo, NY</option>
+	                    <option>Burlington, VT</option>
+	                    <option>California, PA</option>
+	                    <option>Cambridge, MA</option>
+	                    <option>Canton, NY</option>
+	                    <option>Carlisle, PA</option>
+	                    <option>Castine, ME</option>
+	                    <option>Castleton, VT</option>
+	                    <option>Cazenovia, NY</option>
+	                    <option>Center Valley, PA</option>
+	                    <option>Chambersburg, PA</option>
+	                    <option>Cheektowaga, NY</option>
+	                    <option>Chestnut Hill , MA</option>
+	                    <option>Chicopee , MA</option>
+	                    <option>Clarion, PA</option>
+	                    <option>Clinton, NY</option>
+	                    <option>Cobleskill, NY</option>
+	                    <option>Colchester, VT</option>
+	                    <option>Concord , NH</option>
+	                    <option>Cortland, NY</option>
+	                    <option>Craftsbury, VT</option>
+	                    <option>Cresson, PA</option>
+	                    <option>Danbury, CT</option>
+	                    <option>Dartmouth , MA</option>
+	                    <option>Delhi, NY</option>
+	                    <option>Dobbs Ferry, NY</option>
+	                    <option>Doylestown, PA</option>
+	                    <option>DuBois, PA</option>
+	                    <option>Dudley , MA</option>
+	                    <option>Dunmore, PA</option>
+	                    <option>Durham, NH</option>
+	                    <option>East Hartford, CT</option>
+	                    <option>Easton , MA</option>
+	                    <option>Elkins Park, PA</option>
+	                    <option>Elmira, NY</option>
+	                    <option>Erie, PA</option>
+	                    <option>Fairfield, CT</option>
+	                    <option>Farmingdale, NY</option>
+	                    <option>Farmington, ME</option>
+	                    <option>Fayette, PA</option>
+	                    <option>Fitchburg , MA</option>
+	                    <option>Flushing, NY</option>
+	                    <option>Fort Kent, ME</option>
+	                    <option>Framingham, MA</option>
+	                    <option>Franklin, MA</option>
+	                    <option>Fredonia, NY</option>
+	                    <option>Garden City, NY</option>
+	                    <option>Geneseo, NY</option>
+	                    <option>Geneva, NY</option>
+	                    <option>Glen Cove, NY</option>
+	                    <option>Great Barrington , MA</option>
+	                    <option>Greensburg, PA</option>
+	                    <option>Greenville, PA</option>
+	                    <option>Grove City, PA</option>
+	                    <option>Gwynedd Valley, PA</option>
+	                    <option>Hamburg, NY</option>
+	                    <option>Hamden, CT</option>
+	                    <option>Hamilton, NY</option>
+	                    <option>Hanover, NH</option>
+	                    <option>Harrisburg, PA</option>
+	                    <option>Hartford, CT</option>
+	                    <option>Haverford, PA</option>
+	                    <option>Hazleton, PA</option>
+	                    <option>Hempstead, NY</option>
+	                    <option>Henniker, NH</option>
+	                    <option>Houghton, NY</option>
+	                    <option>Huntingdon, PA</option>
+	                    <option>Immaculata, PA</option>
+	                    <option>Indiana, PA</option>
+	                    <option>Ithaca, NY</option>
+	                    <option>Jamaica, NY</option>
+	                    <option>Jenkintown, PA</option>
+	                    <option>Johnson, VT</option>
+	                    <option>Johnson City, NY</option>
+	                    <option>Johnstown, PA</option>
+	                    <option>Keene, NH</option>
+	                    <option>Keuka Park, NY</option>
+	                    <option>Kings Point, NY</option>
+	                    <option>Kutztown, PA</option>
+	                    <option>Lancaster, PA</option>
+	                    <option>Latrobe, PA</option>
+	                    <option>Lehman, PA</option>
+	                    <option>Lewisburg, PA</option>
+	                    <option>Lewiston, ME</option>
+	                    <option>Lewiston, NY</option>
+	                    <option>Longmeadow, MA</option>
+	                    <option>Loretto, PA</option>
+	                    <option>Loudonville, NY</option>
+	                    <option>Lowell, MA</option>
+	                    <option>Lyndonville, VT</option>
+	                    <option>Machias, ME</option>
+	                    <option>Manchester, NH</option>
+	                    <option>Mansfield, PA</option>
+	                    <option>Marlboro, VT</option>
+	                    <option>McKeesport, PA</option>
+	                    <option>Mechanicsburg, PA</option>
+	                    <option>Medford, MA</option>
+	                    <option>Merrimack, NH</option>
+	                    <option>Middlebury, VT</option>
+	                    <option>Middletown, CT</option>
+	                    <option>Millersville, PA</option>
+	                    <option>Mont Alto, PA</option>
+	                    <option>Montpelier, VT</option>
+	                    <option>Moon Township, PA</option>
+	                    <option>Nashua, NH</option>
+	                    <option>Needham, MA</option>
+	                    <option>New Britain, CT</option>
+	                    <option>New Haven, CT</option>
+	                    <option>New Kensington, PA</option>
+	                    <option>New London, CT</option>
+	                    <option>New London, NH</option>
+	                    <option>New Paltz, NY</option>
+	                    <option>New Rochelle, NY</option>
+	                    <option>New York City, NY</option>
+	                    <option>Newburgh, NY</option>
+	                    <option>Newton, MA</option>
+	                    <option>Newton Centre , MA</option>
+	                    <option>North Adams, MA</option>
+	                    <option>North Andover, MA</option>
+	                    <option>Northfield, VT</option>
+	                    <option>Nyack, NY</option>
+	                    <option>Old Westbury, NY</option>
+	                    <option>Oneonta, NY</option>
+	                    <option>Orono, ME</option>
+	                    <option>Oswego, NY</option>
+	                    <option>Paul Smiths, NY</option>
+	                    <option>Philadelphia, PA</option>
+	                    <option>Pittsburgh, PA</option>
+	                    <option>Plainfield, VT</option>
+	                    <option>Plattsburgh, NY</option>
+	                    <option>Plymouth, NH</option>
+	                    <option>Portland, ME</option>
+	                    <option>Potsdam, NY</option>
+	                    <option>Poughkeepsie, NY</option>
+	                    <option>Poultney, VT</option>
+	                    <option>Presque Isle, ME</option>
+	                    <option>Providence, RI</option>
+	                    <option>Purchase, NY</option>
+	                    <option>Putney, VT</option>
+	                    <option>Queens, NY</option>
+	                    <option>Quincy , MA</option>
+	                    <option>Randolph Center, VT</option>
+	                    <option>Reading, PA</option>
+	                    <option>Rindge , NH</option>
+	                    <option>Rochester, NY</option>
+	                    <option>Rosemont, PA</option>
+	                    <option>Rutland, VT</option>
+	                    <option>Salem, MA</option>
+	                    <option>Saratoga Springs, NY</option>
+	                    <option>Schenectady, NY</option>
+	                    <option>Schuylkill Haven, PA</option>
+	                    <option>Scranton, PA</option>
+	                    <option>Selinsgrove, PA</option>
+	                    <option>Sharon, PA</option>
+	                    <option>Shippensburg, PA</option>
+	                    <option>Slippery Rock, PA</option>
+	                    <option>Smithfield, RI</option>
+	                    <option>South Hadley , MA</option>
+	                    <option>South Lancaster, MA</option>
+	                    <option>South Royalton, VT</option>
+	                    <option>Springfield, MA</option>
+	                    <option>St. Bonaventure, NY</option>
+	                    <option>Standish, ME</option>
+	                    <option>Staten Island, NY</option>
+	                    <option>Stony Brook, NY</option>
+	                    <option>Storrs, CT</option>
+	                    <option>Syracuse, NY</option>
+	                    <option>The Bronx, NY</option>
+	                    <option>Throggs Neck, NY</option>
+	                    <option>Titusville, PA</option>
+	                    <option>Troy, NY</option>
+	                    <option>Troy, NY</option>
+	                    <option>Unity, ME</option>
+	                    <option>University Park, PA</option>
+	                    <option>Utica, NY</option>
+	                    <option>Valhalla, NY</option>
+	                    <option>Vestal, NY</option>
+	                    <option>Waltham, MA</option>
+	                    <option>Washington, PA</option>
+	                    <option>Waterville, ME</option>
+	                    <option>Wenham, MA</option>
+	                    <option>West Chester, PA</option>
+	                    <option>West Hartford, CT</option>
+	                    <option>West Haven, CT</option>
+	                    <option>West Point, NY</option>
+	                    <option>Weston, MA</option>
+	                    <option>Wilkes-Barre, PA</option>
+	                    <option>Williamstown, MA</option>
+	                    <option>Willimantic, CT</option>
+	                    <option>Worcester, MA</option>
+	                    <option>York, PA</option>
+	          		</select>
+	            </div>
+	        </div>
+
+
+			<div class="col-xs-12 col-sm-6">
+			<label for="">Skill Set</label>
+				<div class="btn-group profile-form-field" >
 					<select class="btn btn-profile-dropdown" id="dropdown-list" role="menu" ng-model="profile.skillset">
 						<option value="">Select Your Skill Set</option>
 						<option>Designer</option>
@@ -701,39 +700,47 @@
 				</div>
 			</div>
 		</div>
-		
+
+		<div class="row">
+			<div class="col-xs-12">
+			<label for="about-me">About Me
+			</label>
+			<textarea type="text" rows="4" style="color: #000; font-size: 12px; font-family: Helvetica; width=100%;" value="" placeholder="Tell everyone a little bit about yourself" name="about-me" class="profile-form-field" id="about-me" ng-model="profile.about"></textarea>
+			</div>
+		</div>
+
 		<div class="row">
 			<div class="col-xs-12">
 				<div class="row sm-links">
-					<div class="col-xs-12 col-sm-4" style="display: inline">
-						<label for="linkedIn"><img src="../img/linkedin.png" width="20" alt="">
+					<div class="col-xs-12 col-sm-4">
+						<label for="linkedIn"><img src="../img/linkedin.png" width="15" alt="">
 						</label>
 						<input type="text" value="" placeholder="" id="linkedin" class="profile-form-field sm-link"  ng-model="profile.linkedin">
 					</div>
 					<div class="col-xs-12 col-sm-4">
-						<label for="Facebook"><img src="../img/facebook.png" width="20" alt="">
+						<label for="Facebook"><img src="../img/facebook.png" width="15" alt="">
 						</label>
 						<input type="text" value="" placeholder="" id="Facebook" class="profile-form-field sm-link"  ng-model="profile.facebook">
 					</div>
 					<div class="col-xs-12 col-sm-4">
-						<label for="Twitter"><img src="../img/twittericon.png" width="20" alt="">
+						<label for="Twitter"><img src="../img/twittericon.png" width="15" alt="">
 						</label>
 						<input type="text" value="" placeholder="" id="Twitter" class="profile-form-field sm-link"  ng-model="profile.twitter">
 					</div>
 				</div>
 				<div class="row sm-links">
 					<div class="col-xs-12 col-sm-4">
-						<label for="Instagram"><img src="../img/instagram.png" width="20" alt="">
+						<label for="Instagram"><img src="../img/instagram.png" width="15" alt="">
 						</label>
 						<input type="text" value="" placeholder="" id="Instagram" class="profile-form-field sm-link"  ng-model="profile.instagram">
 					</div>
 					<div class="col-xs-12 col-sm-4">
-						<label for="Behance"><img src="../img/behance.png" width="20" alt="">
+						<label for="Behance"><img src="../img/behance.png" width="15" alt="">
 						</label>
 						<input type="text" value="" placeholder="" id="Behance" class="profile-form-field sm-link"  ng-model="profile.beehanced">
 					</div>
 					<div class="col-xs-12 col-sm-4">
-						<label for="Github"><img src="../img/github.png" width="20" alt="">
+						<label for="Github"><img src="../img/github.png" width="15" alt="">
 						</label>
 						<input type="text" value="" placeholder="" id="Github" class="profile-form-field sm-link"  ng-model="profile.github">
 					</div>
@@ -746,56 +753,64 @@
 
 
 	<form class="form" ng-submit="addJob()">
+
 	<div class="row">
 		<h2>Add an Experience</h2>
 		<div class="alert alert-danger" ng-show="badinjob">Please fill out all fields</div>
-			
-			<div class="row">
-				<div class="col-xs-12 col-md-6 col-sm-offset-3" style="padding-left: 27px;">
-					<!-- Single button -->
-					<div class="btn-group" style="width:100%;">
-					
-				    	<select type="text" class="btn btn-profile-dropdown" id="dropdown-list" role="menu" ng-model="job.skill">
-							<option>Academic Accomplishments</option>
-							<option>Leadership</option>
-							<option>Work Experience</option> 
-							<option>Open Campus Job</option>
-				  		</select>
-					</div>
-				</div>
+	</div>
+
+	<div class="row">
+		<div class="col-xs-12 col-sm-6">
+			<!-- Single button -->
+			<label for="">Select the Experience Type</label>
+			<div class="btn-group profile-form-field">
+		    	<select type="text" class="btn btn-profile-dropdown" id="dropdown-list" role="menu" ng-model="job.skill">
+					<option>Academic Accomplishments</option>
+					<option>Leadership</option>
+					<option>Work Experience</option> 
+					<option>Open Campus Job</option>
+		  		</select>
 			</div>
+		</div>
+		<div class="col-xs-12 col-sm-6">
+			<label for="jobcompany">Where?</label>
+			<input type="text" value="" placeholder="" class="profile-form-field" id="jobcompany" ng-model="job.company">
+		</div>
 	</div>
 
 	<div class="row">
 		<div class="col-xs-12 col-sm-6 ">
-			<label for="job-descrip">
+			<label for="job-descrip">One liner to explain experience
 			</label>
-			<input type="text" value="" placeholder="What did you do?" name="job-descrip" class="profile-form-field" id="job-descrip" ng-model="job.org">
+			<input type="text" value="" placeholder="" name="job-descrip" class="profile-form-field" id="job-descrip" ng-model="job.org">
 		</div>
 				
 		<div class="col-xs-12 col-sm-6">
-			<label for="startdate">
+			<label for="startdate">Time Frame
 			</label>
-			<input type="text" value="" placeholder="When?" name="startdate" class="profile-form-field" id="" ng-model="job.date">
+			<input type="text" value="" placeholder="" name="startdate" class="profile-form-field" id="" ng-model="job.date">
 		</div>
 	</div>
+
 	<div class="row">
 		<div class="col-xs-12" style="padding-top:10px;">
-		<textarea type="text" rows="3"style="color: #000; font-size: 12px; font-family: Helvetica;" value="" placeholder="Tell everyone a little more about what you did.  Feel free to add links, too." name="enddate" class="profile-form-field" id="enddate" ng-model="job.description"></textarea>
+			<label for="jobdescripfull">Explain your job in detail</label>
+		<textarea type="text" rows="3"style="color: #000; font-size: 12px; font-family: Helvetica;" value="" placeholder="Tell everyone a little more about what you did.  Feel free to add links, too." name="enddate" class="profile-form-field" id="jobdescripfull" ng-model="job.description"></textarea>
 		</div>
 	</div>
 	
 	<input type="submit" value="+ Add Job" name="subscribe" id="mc-embedded-subscribe" style="width: 20%; text-align:center; margin-top:20px;" class="btn round-green-btn"> 
-</form>
+	</form>
+</div>
+	
 
-	</div>
 
 
-
-	<div class="col-md-4" id="preview"  data-spy="affix" data-offset-top="60" data-offset-bottom="200">
-		<h1 style="font-family: 'Cedarville Cursive', cursive; text-align:left; font-size:20px;">What employers see:</h1>
-		<profile profile="profile" style="width: 100%;" d="true" editing="job"></profile>
-	</div>
+<div class="col-md-4" id="preview"  data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+	<h2>Preview:</h2>
+	<profile profile="profile" style="width: 100%;" d="true" editing="job"></profile>
+</div>
+</div>
 
 </div>
 

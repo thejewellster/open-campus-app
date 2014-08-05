@@ -206,13 +206,16 @@ angular.module('myApp.controllers', ['ui.bootstrap'])
 
       $scope.sub = function() {
          var d = $scope.profile;
-         if (d.name && d.lname && d.college && d.major && d.location) {
+         if (true) {
+            $scope.badin = false;
             d.email = $scope.user.email;
+
             $scope.profiles[$scope.user.email.split('.').join('|dot|')] = d;
          } else {
             $scope.badin = true;
          }
       };
+
 
       $scope.addJob = function() {
          var p = $scope.profile;

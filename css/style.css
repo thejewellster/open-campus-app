@@ -1275,13 +1275,14 @@ input.post-form-field{
 textarea:focus, input:focus{
     outline: 0;
 }
-.sm-links{
-  padding: 10px;
-}
 
-.sm-link{
-  width:75%;
-  padding-right: 5px;
+
+label {
+
+  font-size:10px;
+  font-weight: 200;
+  margin: 0 auto;
+  padding:5px;
 }
 
 
