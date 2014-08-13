@@ -38,6 +38,11 @@ hr{
   margin-bottom: 10px;
 }
 
+.playbook-image{
+  float:left;
+  padding-right: 10px;
+}
+
 
 /*<--------------------headers----------------------->*/
 
@@ -253,13 +258,14 @@ div#myModalLabel.modal-title.ng-binding{
 }
 
 .modal-title{
-  font-size: 4em;
+  font-size: 2.5em;
   color: #d7b333; 
   text-align: left;
 }
 
 .modal-sub-title{
   font-size: 1.5em;
+  font-family: "Garamond", "Times New Roman";
 }
 
 /*---------------------*/
@@ -304,8 +310,6 @@ body{
 .learn h2{
   font-size: 1.5em;
 }
-
-
 
 
 .is-visible{
@@ -1308,3 +1312,19 @@ font-family: 'Cedarville Cursive', cursive;
 }
 
 
+/*--playbook--*/
+#playbook h1{
+font-size: 2.5em;
+font-weight:300;
+}
+
+#playbook h2{
+font-family: "Garamond", "Times New Roman";
+font-size: 1.5em;
+}
+
+.row-new{
+  border-top: 5px solid #4e9a34;
+  margin-top: 75px;
+  padding-top: 25px;
+}

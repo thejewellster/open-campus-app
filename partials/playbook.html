@@ -1,0 +1,154 @@
+
+
+
+<div class="container" style="padding: 0 100px;" id="playbook">
+
+	<div class"row">
+		<center>
+		<h1>Welcome to the Playbook by Open Campus</h1>
+		<h2>We're new, so let us tell you about what we're doing here.</h2>
+		</center>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-6 col-md-4 col-md-offset-2">
+
+			<h1><img src="img/mission.png" width="35" class="img-responsive playbook-image" alt="">Mission</h1>
+			<h2>Open Campus is an online community that connects college students looking for freelance jobs with local businesses who are seeking flexible, skilled and reliable help. </h2>
+
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-4">
+			<h1><img src="img/vision.png" width="35" class="img-responsive playbook-image" alt="">Vision</h1>
+			<h2>To create a new workforce of Student Professionals and personalize the world of online freelacning so students acheive their goal of getting real world experience and , and businesses achieve their goal of hiring talent within their community.  </h2>
+		</div>
+	</div>
+	<!--user flow short bit-->
+	<div class="row row-new">
+		<div class="col-xs-12 col-sm-6 col-md-3">
+			<h1><img src="img/cloud.png" width="40" class="playbook-image" alt="">Upload</h1>
+			<h2>Students and businesses alike create profiles.  Let the world know who you are and what you've been up to.
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3">
+			<h1><img src="img/write.png" width="35" class="playbook-image" alt="">Post</h1>
+			<h2>Post a job, it's that easy.  Whether you're looking for a specific skill set or overall "Student Professional" we've got you covered.</h2>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3">
+			<h1><img src="img/pinpoint.png" height="25" class="playbook-image" alt="">Pinpoint</h1>
+			<h2>Pinpoint the exact student you're looking for, or a exact job that fits your tastes.  If your visual, find one on our Map, or filter by whatever criteria seems good to you.</h2>
+		</div>
+		<div class="col-xs-12 col-sm-6 col-md-3">
+			<h1><img src="img/handshake.png" width="40" class="playbook-image" alt="">Hire</h1>
+			<h2>If you're hiring, tap a student and get connected.  If you're looking to get hired, apply with your profile.  No lengthy forms needed.</h2>
+		</div>
+	</div>
+	<!--user flow long bit-->
+	<div class="row row-new">
+		<div class="col-xs-12">
+			<h1><img src="img/cloud.png" width="40" class="playbook-image" alt="">Upload</h1>
+			<h2>Students upload a profile, which is condensed into a thumbnail, of everything they want an employer to know about them.  Pull in social media pages and add all your experience and accomplishments.  Build a <i>visual</i> resume.  Show what you've done instead of listing it on an 8.5x11 piece of paper. </h2>
+			<img src="img/screenshots/aboutme.png" class="img-responsive" alt="">
+		</div>
+	</div>
+	<div class="row row-new">
+		<div class="col-xs-12">
+			<h1><img src="img/write.png" width="35" class="playbook-image" alt="">Post</h1>
+			<h2>Posting a job is easy and intuitive.  It only takes a few minutes of your time.  Watch your job post auto fill as you describe what type of student you're looking for.  Post, it's only $25 for the next few months.  Finding any type of employee should be enjoyable and easily accessible.  That's why we bring the students to you.  No more "post a job and let is float in cyber space" business.</h2>
+			<img src="img/postflowchart.png" width="800"style="margin-left:auto; margin-right:auto; display:block;" class="img-responsive" alt="">
+		</div>
+	</div>
+
+	<div class="row row-new">
+		<div class="col-xs-12">
+			<h1><img src="img/pinpoint.png" height="25" class="playbook-image" alt="">Pinpoint a Job</h1>
+			<h2><strike>Find</strike> Pinpoint a job.  Whether you're looking for a short music gig, or long term software engineering position, it's important that you can pinpoint exactly what you're looking for.  With our filter features, you can do just that.</h2>
+			<img src="img/screenshots/pinpointajobcut.png" class="img-responsive" alt="">
+			<h1><img src="img/pinpointonmap.png" height="25" class="playbook-image" alt="">The Map</h1>
+			<h2>So wherever you are, you know what's jobs are around the corner looking for you.</h2>
+
+			<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d2914.2341450389263!2d-73.78087252378464!3d43.078572534283865!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1407801077149" width="600" height="450" frameborder="0" style="border:0"></iframe>
+		
+
+			<h1><img src="img/pinpoint.png" height="25" class="playbook-image" alt="">Pinpoint a Student</h1>
+			<h2>Open Campus is unique in that our technology matches jobs to students.  No more searching through generalized lists.  We match jobs to students based on location, job type and skill needed.  This approach makes hiring freelance help a personalized, enjoyable experience.  <b>Go ahead and check out some of our Student Professionals below.</b>  Find more students like these on the site.</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12 col-sm-4" ng-repeat="profile in profs | filter: { featured : 'true' } ">
+			<profile profile="profile" ng-show="profile"></profile>
+		</div>
+	</div>
+
+	<div class="row row-new">
+		<div class="col-xs-12">
+			<h1><img src="img/handshake.png" width="40" class="playbook-image" alt="">Hire</h1>
+			<h2>There are two ways to connect on Open Campus in order to get hired.  If you're a student, apply for a job with one click.  No lengthy forms needed.  Applying for a job sends your profile to the job posts.  If you're a businesses, reach out and TAP a student whose profile impresses you.  Let them know you're interested in meeting up.  SINCE we're hyper localized, you can meet for coffee that day.</h2>
+			<img src="img/screenshots/tapscreenshot.png" class="img-responsive pull-left" width="400" alt="">
+			<img src="img/screenshots/applymodal.png" width="400" class="img-responsive pull-right" alt="">
+			
+		</div>
+	</div>
+
+	<div class="row row-new">
+		<div class="col-xs-12">
+			<h1><img src="../img/company.png" width="35" alt="">Company Culture</h1>
+			<h2>Company culture is very important to us.  We're not only building a technical tool, we're building a brand.</h2>
+			<h1>Open</h1>
+			<h2>It’s in our name. Through our site and connections to students, we open the door to for businesses to hire an entire workforce that was not easily available to them previously. </h2>
+			<h1>Honest</h1>
+			<h2>Our standards, methodology for qualifying students and monitoring of student profiles helps assure that what you read is what you will get.  </h2>
+			<h1>Authentic</h1>
+			<h2>We are building Open Campus on Open Campus.  We post and hire for our own needs from our own site.  Open Campus is a testament to itself.</h2>
+			<h1>Reliable</h1>
+			<h2>Tap and accept students whose OC Profile indicates quality and successful completion of projects.  The past is a great indication of the future.</h2>
+			<h1>Friendly</h1>
+			<h2>We prioritize creating a friendly, familiar, and social user experience.  Getting a job should not be a chore. Your job is your lifestyle, we make sure finding that job is just as fun as doing it.</h2>
+			<h1>Professional</h1>
+			<h2>Student professionals are a new type of worker.  They are eager and actively looking for work based on their interests and skill sets. </h2>
+		</div>
+	</div>
+	<div class="row row-new">
+		<div class="col-xs-12">
+			<h1>Major Mile Stones</h1>
+			<h2>1. Skidmore Freirich Business Plan Competition 2014 Finalists<br>
+				2. New York State Business PLan Competition 2014 3rd Place, Social Entrepreneurship<br>
+				3. Officially LLCed June 2nd, 2014<br>
+				4. Launched official MVP August 6th, 2014: 100 users signed up in 24 hours<br>
+				5. Actively searching for 2014-2015 <a href="http://opencampusjobs.com/brandambassador.pdf">Student Ambassadors</a> (with high potential to take on larger <br>leadership roles) to take Open Campus to the next level
+				6. Start-Up gift from Sara Arnell, Skidmore Alumna and Advisory Board member
+				7. Took initial seed investment from Phil Lodico, Advisory Board member
+			</h2>
+			<h1>Fall 2015 Semester Goals</h1>
+			<h2>
+				1. 100,000 Students on Open Campus by end of finals week Fall 2014<br>
+				2. 10,000 job posts by end of finals week Fall 2014.<br>
+				3. Organize and excute tablings at every relevant on-campus fair<br>
+				4. Each ambassador will represent Open Campus at their school's business plan competition if applicable and be willing to present OC at various start-up events around New York.  <br>
+				5. Entire team will participate in the New York State Business Plan Competition 2015<br>
+				6. End of semester weekend retreat for team bonding and strategizing<br>
+				7. Weekly team meeting every Sunday either in person or over Skype.  Food is always provided.  Building a solid team is #1 priority.<br>
+				8. Pinpoint relevant businesses, make meetings, sell the site, get job posts.  You will be compensated for each job posts you personally get on the site.  
+				9. Each team member must dedicate to ten hours a week of work.  The more you put in, the more you get out.  Open Campus team members work hard at school, at extra curriculars, but make time for fun and re-energizing.  Work-life balance is important, even in college.   
+			</h2>
+		</div>
+	</div>
+
+	<div class="row row-new">
+		<div class="col-xs-12">
+			<center>
+			<h1>Like what you see?</h1>
+			<h2>We'd love to have you part of our community.  If you're looking for a job, or you're looking for an employee.  Join us.</h2>
+			<div>
+				<a href="mailto:marcella@opencampusjobs.com" style="color: #807f80;"><button class="btn btn-sm round-gold-btn" style="display:inline;">Email Marcella, CEO</button></a>
+				<a href="http://opencampusjobs.com/app.html#/post" style="color: #807f80;"><button class="btn btn-sm round-gold-btn" style="display:inline;">Post a Job</button></a>
+				<a href="http://opencampusjobs.com/app.html#/login" style="color: #807f80;"><button class="btn btn-sm round-gold-btn" style="display:inline;">Sign up as a Student</button></a>
+			</div>
+			</center>
+		</div>
+	</div>
+
+
+
+
+
+	</div>
+</div>
+

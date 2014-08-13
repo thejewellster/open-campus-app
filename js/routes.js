@@ -59,5 +59,15 @@ angular.module('myApp.routes', ['ngRoute'])
          controller: 'HomeCtrl'
       });
 
+      //playbook in app to showcase featured students
+      $routeProvider.when('/playbook', {
+         templateUrl: 'partials/playbook.html',
+         controller: 'HomeCtrl'
+      });
+
+
+
+
+
       $routeProvider.otherwise({redirectTo: '/students'});
    }]);
