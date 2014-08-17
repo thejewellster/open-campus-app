@@ -195,10 +195,14 @@ color: #fff;
 
 /*-----nav bar hamburger---*/
 
+.mobile-icons{
+  padding: 5px;
+}
+
 .navbar-default .navbar-toggle{
   background-color: #5eb346;
   color: #fff;
-  margin: 53px 64px 0 0;
+  margin: 53px 35px 0 0;
   border: none;
 }
 .navbar-default .navbar-toggle:hover{
@@ -213,7 +217,6 @@ color: #fff;
   .nav li{
     background-color: #4e9a34;
   }
-
 
   .navbar-nav{
     margin-top: 100px;
@@ -242,7 +245,78 @@ color: #fff;
   transition: all         600ms ease;
   }
 }
+
+
+
+/*--------- home page colleges------------*/
+.college-icon{
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
+
+.college-icon h2{
+  font-family: "Garamond", "Times New Roman";
+  font-size:12px;
+  margin-top:8px;
+}
+
+
+#you-in h1, #you-in h2{
+  color: #fff;
+}
+
+.fall-image{
+  position: relative;
+}
+
+
+
+
+
+@media (max-width: 4000px){
+
+  .fall-image-text{
+    position: absolute;
+    width: 100%;
+    top: 156px;
+  }
+}
+
+@media (max-width: 1080px){
+
+  .fall-image-text{
+    position: absolute;
+    width: 100%;
+    top: 120px;
+  }
+}
+
+
+@media (max-width: 767px){
+
+  .fall-image-text{
+    position: absolute;
+    width: 100%;
+    top: 42px;
+  }
+}
+
+
+
+@media (max-width: 500px){
+
+  .fall-image-text{
+    position: absolute;
+    width: 100%;
+    top: 16px;
+  }
+  .fall-image-text h2{
+    display: none;
+  }
+}
+
 
 
 
@@ -529,6 +603,7 @@ width: 300px;
 /*------home/responsive home----*/
 .quad-logo{
   margin: 10px 0 0 30px;
+  width:165px;
 }
 
 .home-app{
@@ -1328,3 +1403,91 @@ font-size: 1.5em;
   margin-top: 75px;
   padding-top: 25px;
 }
+
+/*--Quick Looks Blog--*/
+.blog-post{
+  background-color: #ededed;
+  padding: 0 10px 10px 10px;
+  margin: 5px 0;
+}
+#blog h2{
+  margin: 0 auto;
+  padding: 5px 0;
+  margin-bottom:0;
+}
+
+#blog h3{
+  font-family: "Garamond","Times New Roman";
+  font-size: 12px;
+  margin: 0 auto;
+  padding-top:10px;
+}
+.blog-post{
+  border-left: 5px solid #d7b333;
+}
+ul.blog-post-list{
+  padding-left:10px;
+  margin: 0 auto;
+}
+
+ul.blog-post-list li{
+  font-family: "Garamond";
+}
+
+/*--newsfeed */
+.newsfeed a{
+  font-family: "Helvetica";
+  color: #63b258;
+  font-size:12px;
+}
+
+.newsfeed a:hover{
+  color:#74c96a;
+}
+
+.profile-picture{
+  margin-right: 10px;
+}
+
+.newsfeed{
+  position:absolute;
+  width: 100%; 
+  background-color: #ededed; 
+  margin:50px;
+  padding: 30px;
+  z-index: 0;
+  height: 100%;
+}
+
+.newsfeed-update{
+  position: absolute;
+  width: 100%; 
+  margin: 0 auto; 
+  display:inline; 
+  background-color: #fff;
+  border-radius: 20px;
+  z-index: 1;
+}
+
+.company-name{
+  font-family: "Helvetica";
+  padding: 30px 0 15px 30px;
+  color: #000;
+  font-size: 20px;
+}
+
+.nf-job-info{
+  padding: 15px 0 30px 45px;
+  line-height: 18px;
+}
+
+.nf-job-info ul{
+  padding-left: 8px;
+}
+
+ul.nf-job-info li{
+  font-size: 12px;
+}
+/*-------------------*/
+
+

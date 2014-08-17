@@ -1,0 +1,20 @@
+<div class="col-sm-12 newsfeed">
+    <div class="newsfeed-update">
+        <div class="company-name">
+           <img src="../img/square-image.png" width="50" class="profile-picture" alt=""><a href="{{ data.website }}">{{ data.company }}</a><br>      
+        </div>
+
+        <div class="nf-job-info">
+            <ul>
+                <li>{{ data.description }}</li>
+                <li>{{ data.skill }}</li>
+                <li>Where</li>
+                <li>{{ data.time }}: {{ data.start }} - {{ data.end }}</li>
+                <li>{{ data.compensation }}</li>
+                <li>{{ data.explanation }}</li>
+            </ul>
+            <hr>
+            <img src="../img/pinpoint.png"  width="10" style="margin: 0 10px;"alt="">{{ data.location }}
+        </div>
+    </div>
+</div>

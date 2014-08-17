@@ -1,0 +1,53 @@
+a{
+	font-family: "Helvetica";
+	color: #63b258;
+	font-size:12px;
+}
+
+a:hover{
+	color:#74c96a;
+}
+
+.profile-picture{
+	margin-right: 10px;
+}
+
+.newsfeed{
+	position: absolute;
+	width: 100%; 
+	background-color: #ededed; 
+	margin: 50px;
+	padding: 30px;
+	z-index: 0;
+	height: 100%;
+}
+
+.newsfeed-update{
+	position: absolute;
+	width: 100%; 
+	margin: 0 auto; 
+	display: inline; 
+	background-color: #fff;
+	border-radius: 20px;
+	z-index: 1;
+}
+
+.company-name{
+	font-family: "Helvetica";
+	padding: 30px 0 15px 30px;
+	color: #000;
+	font-size: 20px;
+}
+
+.nf-job-info{
+	padding: 15px 0 30px 45px;
+	line-height: 18px;
+}
+
+.nf-job-info ul{
+	padding-left: 8px;
+}
+
+ul.nf-job-info li{
+	font-size: 12px;
+}
