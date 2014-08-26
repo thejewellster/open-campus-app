@@ -874,7 +874,7 @@ ul.logistics li, ul.payment-info li{
 
 /*--footer--*/
 ul.footer-links{
-  padding: 50px 0 0 50px;
+  padding: 30px 0 0 50px;
 }
 ul.footer-links li a{
   font-size: 1.4em;
@@ -1432,6 +1432,11 @@ ul.blog-post-list{
 
 ul.blog-post-list li{
   font-family: "Garamond";
+}
+
+ul.blog-post-list-1 li{
+  font-family: "Garamond";
+  list-style-type: circle;
 }
 
 /*--newsfeed */
