@@ -1249,6 +1249,10 @@ font-size: 12px;
   border: none;
 }
 
+.round-green-btn:hover{
+  opacity: 50%;
+}
+
 .round-gold-btn{
   margin-left: auto;
   margin-right: auto;
