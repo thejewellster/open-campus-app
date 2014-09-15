@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
     <title>Open Campus Jobs</title>
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/bootstrap.css">
@@ -64,7 +65,7 @@
         </div><!-- /.navbar-collapse -->
 
 
-        <iframe src="//player.vimeo.com/video/101333870" class="vimeo-player hidden-xs hidden-sm" width="700" height="393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        <iframe src="//player.vimeo.com/video/101333870?byline=0&title=0&portrait=0&badge=0&autoplay=1" class="vimeo-player" width="700" height="393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
         
       </div><!-- /.container-fluid -->
     </nav>
@@ -122,45 +123,45 @@
 	
 </div>
 
-<div class="container-fluid home-page-row" style="background-color:#ededed; padding-bottom:100px;">
+<div class="container-fluid home-page-row" style="background-color:rgb(88, 179, 65); padding-bottom:100px;">
 	<div class="container">
 		<div class="row home-page-row">
-			<h2 style="text-align:center;">Student Professionals from 8 different colleges and counting...</h2>
+			<h2 style="text-align:center; color:#fff; padding:0 .5em 0 .5em;">Student Professionals from 8 different colleges and counting...</h2>
 		</div>
 		<div class="row">
 			<div class="col-xs-12 col-sm-3 college-icon">
 				<img src="img/colleges/skidmore.jpg" width="100" class="img-responsive img-circle" alt=""><br>
-				<h2>Skidmore College</h2>
+				<h2 style="color:#fff;">Skidmore College</h2>
 			</div>
 			<div class="col-xs-12 col-sm-3 college-icon">
 				<img src="img/colleges/rpi.jpg" width="100" class="img-responsive img-circle" alt=""><br>
-				<h2>RPI</h2>
+				<h2 style="color:#fff;">RPI</h2>
 			</div>
 			<div class="col-xs-12 col-sm-3 college-icon">
 				<img src="img/colleges/ualbany.jpg" width="100" class="img-responsive img-circle" alt=""><br>
-				<h2>SUNY University at Albany</h2>
+				<h2 style="color:#fff;">SUNY University at Albany</h2>
 			</div>
 			<div class="col-xs-12 col-sm-3 college-icon">
 				<img src="img/colleges/union.jpg" width="100" class="img-responsive img-circle" alt=""><br>
-				<h2>Union College</h2>
+				<h2 style="color:#fff;">Union College</h2>
 			</div>
 		</div>
 		<div class="row">
 			<div class="col-xs-12 col-sm-3 college-icon">
 				<img src="img/colleges/siena.jpg" width="100" class="img-responsive img-circle" alt=""><br>
-				<h2>Siena College</h2>
+				<h2 style="color:#fff;">Siena College</h2>
 			</div>
 			<div class="col-xs-12 col-sm-3 college-icon">
 				<img src="img/colleges/suffolk.jpg" width="100" class="img-responsive img-circle" alt=""><br>
-				<h2>Suffolk University</h2>
+				<h2 style="color:#fff;">Suffolk University</h2>
 			</div>
 			<div class="col-xs-12 col-sm-3 college-icon">
 				<img src="img/colleges/connecticut.jpg" width="100" class="img-responsive img-circle" alt=""><br>
-				<h2>Connecticut College</h2>
+				<h2 style="color:#fff;">Connecticut College</h2>
 			</div>
 			<div class="col-xs-12 col-sm-3 college-icon">
 				<img src="img/colleges/wesleyan.jpg" width="100" class="img-responsive img-circle" alt=""><br>
-				<h2>Wesleyan College</h2>
+				<h2 style="color:#fff;">Wesleyan College</h2>
 			</div>
 		</div>
 	</div>
@@ -174,9 +175,11 @@
 			<h1>You in?</h1>
 			<h2>We'd love to have you part of our community.  If you're looking for a job, or you're looking for an employee.  Join us.</h2>
 			<div>
-				<a href="http://opencampusjobs.com/app.html#/post" style="color: #807f80;"><button class="btn btn-sm round-gold-btn" style="display:inline;">Post a Job</button></a>
-				<a href="http://opencampusjobs.com/app.html#/playbook" style="color: #807f80;"><button class="btn btn-sm round-green-btn" style="display:inline;">LEARN MORE</button></a>
-				<a href="http://opencampusjobs.com/app.html#/login" style="color: #807f80;"><button class="btn btn-sm round-gold-btn" style="display:inline;">Sign up as a Student</button></a>
+                <ul class="you-in-links">
+				    <li><a href="http://opencampusjobs.com/app.html#/post" style="color: #807f80;"><button class="btn btn-sm round-gold-btn" style="display:inline;">Post a Job</button></a></li>
+				    <li><a href="http://opencampusjobs.com/app.html#/playbook" style="color: #807f80;"><button class="btn btn-sm round-green-btn" style="display:inline;">LEARN MORE</button></a></li>
+				    <li><a href="http://opencampusjobs.com/app.html#/login" style="color: #807f80;"><button class="btn btn-sm round-gold-btn" style="display:inline;">Sign up as a Student</button></a></li>
+                </ul>
 			</div>
 			</center>
 		</div>
@@ -252,6 +255,16 @@
 
 	});
 
+</script>
+
+<script>
+    $(document).ready(function() {
+        $(window).resize(function() {
+        if ($(window).width() < 925) {
+            $("iframe").remove();
+        }
+        }).resize();
+    });
 </script>
 
 
