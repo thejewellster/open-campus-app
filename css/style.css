@@ -1,3 +1,7 @@
+html,
+body {
+    height: 100%;   
+}
 .clearfix:before,
 .clearfix:after {
     content: " ";
@@ -12,15 +16,128 @@ section{
 }
 
 
+.home {
+    position: relative;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video video {
+    position: absolute;
+    right: 0; bottom: 0;
+    min-width: 100%; min-height: 100%;
+    width: auto; height: auto; z-index: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    background: rgba(39, 39, 39, 0.5);
+}
+
+
 .btn-success{
   letter-spacing: 4px;
 }
 
+.home-buttons {
+    margin: 10% 0 0 0;   
+    text-align: center;
+}
+
+.button-heading {
+    display: block;
+    font-family: "Helvetica Neue", Arial, Sans-Serif;
+    font-size: 3em;
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    padding-bottom: 0.5em;
+}
+
+.post-a-job {
+    border: 0;
+    padding: 1em;
+    background: rgba(78,154,52, 0.8);
+    border-radius: 30px;
+    color: white;
+    font-size: 2em;
+    width: 75%;
+    -webkit-transition: background 0.5s;
+    -ms-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    transition: background 0.5s;
+}
+
+.find-a-job {
+    border: 0;
+    padding: 1em;
+    background: rgba(78,154,52, 0.8);
+    border-radius: 30px;
+    color: white;
+    font-size: 2em;
+    width: 75%;
+    -webkit-transition: background 0.5s;
+    -ms-transition: background 0.5s;
+    -moz-transition: background 0.5s;
+    -o-transition: background 0.5s;
+    transition: background 0.5s;
+}
+
+.post-a-job:hover,
+.find-a-job:hover {
+    background: rgba(78,154,52, 1);
+    outline: 0;
+}
+
+
+
+.headline {
+    display: block;
+    font-family: "Cedarville Cursive", Arial, Sans-Serif;
+    font-size: 5em;
+    color: white;
+    font-weight: 300;
+    letter-spacing: 3px;
+    padding-bottom: 1em;
+}
+
+/*
 .vimeo-player{
   margin-left: auto;
   margin-right: auto;
   display: block;
   margin-top: 75px;
+}
+*/
+
+@media screen and (max-width: 924px) {
+    .vimeo-player {
+        
+    }
+    
+    .callout-header {
+        display: none;   
+    }
+    
+    .video,
+    .video video {
+        display: none;   
+    }
 }
 
 a:hover{
@@ -41,12 +158,6 @@ hr{
 .playbook-image{
   float:left;
   padding-right: 10px;
-}
-
-.img-center{
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
 }
 
 
@@ -101,7 +212,7 @@ h2 {
 h3 {
     margin-right: 0 auto;
     margin-left: 0 auto;
-    font-family: "Garamond", Georgia, Sans-Serif;
+    font-family: "Helvetica Neue", Arial, Sans-Serif;
     font-size: 2em;
     color: #404040;
     float: center;
@@ -168,6 +279,7 @@ h6{
 
 /*---nav bar link styles---*/
 .navbar-default .navbar-nav .navbar-login{
+  border-bottom: none;
   background-color: #4e9a34;
   margin-left: 10px;
   padding-left: 20px;
@@ -187,6 +299,7 @@ h6{
 .navbar-default .navbar-nav > li > a {
 color: #fff;
 padding: 7px;
+border-bottom: 3px solid transparent;
 }
 
 .navbar-default .navbar-nav > li > a:hover {
@@ -260,14 +373,26 @@ color: #fff;
   margin-left: auto;
   margin-right: auto;
   display: block;
+  -webkit-transition: all 0.5s cubic-bezier(0, 1.8, 1, 1.8);
+  -moz-transition: all 0.5s cubic-bezier(0, 1.8, 1, 1.8);
+  -ms-transition: all 0.5s cubic-bezier(0, 1.8, 1, 1.8);
+  -o-transition: all 0.5s cubic-bezier(0, 1.8, 1, 1.8);
+  transition: all 0.5s cubic-bezier(0, 1.8, 1, 1.8);
 }
 
 .college-icon h2{
-  font-family: "Garamond", "Times New Roman";
+  font-family: "Helvetica Neue", Arial, Sans-Serif;
   font-size:12px;
   margin-top:8px;
 }
 
+.college-icon:hover {
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+}
 
 #you-in h1, #you-in h2{
   color: #fff;
@@ -275,52 +400,129 @@ color: #fff;
 
 .fall-image{
   position: relative;
+    height: auto;
 }
 
 
 
 
 
-@media (max-width: 4000px){
+@media screen and (max-width: 4000px){
 
   .fall-image-text{
     position: absolute;
     width: 100%;
     top: 156px;
   }
+    
+  .you-in-links {
+    padding: 0;
+    list-style: none;
+  }
+    
+  .you-in-links li {
+    padding: 0 .5em 0 .5em; 
+    display: inline-block;
+  }
 }
 
-@media (max-width: 1080px){
+@media screen and (max-width: 1080px){
 
   .fall-image-text{
     position: absolute;
     width: 100%;
     top: 120px;
   }
+    
+  .you-in-links {
+    padding: 0;
+    list-style: none;
+  }
+    
+  .you-in-links li {
+    padding: 0 .5em 0 .5em; 
+    display: inline-block;
+  }
+
 }
 
 
-@media (max-width: 767px){
+@media screen and (max-width: 767px){
 
   .fall-image-text{
     position: absolute;
     width: 100%;
     top: 42px;
   }
+    
+  .fall-image-text h1 {
+    font-size: 2.5em;   
+  }
+    
+  .you-in-links {
+    padding: 0;
+    list-style: none;
+  }
+    
+  .you-in-links li {
+    padding: .5em 0 .5em 0;  
+    display: block;
+  }
+    
+  .fall-image-text h2{
+    display: none;
+  }
 }
 
 
 
-@media (max-width: 500px){
+@media screen and (max-width: 500px){
 
   .fall-image-text{
     position: absolute;
     width: 100%;
     top: 16px;
   }
+
+  .fall-image-text h1 {
+    font-size: 2.5em;   
+  }
+
   .fall-image-text h2{
     display: none;
   }
+
+  .you-in-links {
+    padding: 0;
+    list-style: none;
+  }
+    
+  .you-in-links li {
+    padding: .5em 0 .5em 0;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 400px) {
+.fall-image-text {
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.fall-image-text h1 {
+    font-size: 3em;   
+}
+
+.you-in-links {
+    padding: 0;
+    list-style: none;
+}
+
+.you-in-links li {
+    padding: .5em 0 .5em 0;  
+    display: block;
+}
 }
 
 
@@ -363,6 +565,18 @@ body{
   text-align: center;
   padding: 10px 10px;
   line-height: 1.4em;
+  font-size: .7em;
+}
+
+@media screen and (min-width: 768px) {
+    .opening-sent{
+        z-index: -1;
+        text-align: center;
+        padding: 10px 10px;
+        line-height: 1.4em;
+        font-size: 1em;
+    }
+    
 }
 
 .opening-sent-2 h2{
@@ -542,6 +756,64 @@ width: 300px;
   background-color: #61ab63;
 }
 
+/*=========job pulls=========*/
+.firstJob,
+.secondJob,
+.thirdJob {
+    border-top: 3px solid #69bf6a;
+    margin: 2em 0 0 0;
+}
+
+.firstJob p,
+.secondJob p,
+.thirdJob p {
+    font-size: 1.5em;
+}
+
+.firstJob h3,
+.secondJob h3,
+.thirdJob h3 {
+    font-size: 3em;
+    font-weight: 300;
+}
+
+.job-pull-btn {
+    border: 1px solid #69bf6a;
+    padding: .5em;
+    background: #69bf6a;
+    color: #fff;
+    font-size: 1.5em;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.job-pull-btn:hover {
+    focus: 0;
+    outline: none;
+    background: #fff;
+    color: #69bf6a;
+}
+
+.job-pull-header {
+    text-align: center;   
+}
+
+@media screen and (max-width: 767px){
+    
+    .firstJob,
+    .secondJob,
+    .thirdJob,
+    .job-pull-header {
+        text-align: center;
+    }
+  
+}
+
+
+
 
 
 /*-----------log in app page------------*/
@@ -551,6 +823,36 @@ width: 300px;
   display: block;
   width: 100%;
 
+}
+
+
+
+/*full screen background image for login pages*/
+#business-login {
+    background: url('../img/business.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    backrgound-position: center top;
+    background-size: cover;
+    margin: -25px 0 0 0;
+    
+        
+}
+
+#student-login {
+    background: url('../img/students.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    backrgound-position: center top;
+    background-size: cover;
+    margin: -25px 0 0 0;
+    height: 100%;
+    
+        
+}
+
+span.difficulty-text {
+    color: #fff;   
 }
 
 
@@ -631,6 +933,13 @@ width: 300px;
 
 .home-page-row{
 margin-top: 25px;
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .home-page-row {
+           text-align: left;
+    }
 }
 
 @media (min-width: 925px){
@@ -698,6 +1007,7 @@ margin-top: 25px;
 .t-c-pp{
   padding: 15px;
   text-align: center;
+  color: #fff;
 }
 .t-c-pp a:hover{
   font-family: 'Cedarville Cursive', cursive;
@@ -706,6 +1016,11 @@ margin-top: 25px;
 .sign-up-box{
 
   padding: 100px 50px;
+}
+
+.sign-up-box h1,
+.sign-up-box h2 {
+    color: #fff;   
 }
 
 @media (max-width: 767px){
@@ -762,6 +1077,41 @@ ul.sub-buttons li a:hover{
   background-color: #fff;
   color: #63b258;
 
+}
+
+/*right hand job thumbnail for business*/
+#job {
+    position: fixed;
+    right: 1em;
+}
+
+/*fix the top buttons on the Post a Job Page*/
+.welcome-post-job {
+    display: inline;
+}
+.top-buttons {
+    float: right;
+    padding: 10px 0 0 0;
+    display: inline;
+}
+
+.top-buttons > li {
+    display: inline-block;   
+}
+
+@media screen and (max-width: 991px) {
+    .top-buttons {
+        padding: 0;
+        float: none;
+    }
+    
+    .top-buttons > li {
+        display: inline-block;   
+    }
+    
+    .welcome-post-job {
+        display: block;   
+    }
 }
 
 
@@ -903,7 +1253,7 @@ ul.footer-links li a:hover{
 
 
 .footer-bar{
-  margin-top: 100px;
+  /*margin-top: 100px;*/
   margin-right: auto;
   margin-left: auto;
   width: 100%;
@@ -1255,6 +1605,10 @@ font-size: 12px;
   border: none;
 }
 
+.round-green-btn:hover{
+  opacity: 150%;
+}
+
 .round-gold-btn{
   margin-left: auto;
   margin-right: auto;
@@ -1344,10 +1698,26 @@ input.post-form-field{
   width: 100%;
   padding: 10px 10px 5px 10px;
   color: #000;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
   border: 0;
   border-bottom: 2px solid #000;
   font-size: 12px;
+}
+
+.post-form-field::-webkit-input-placeholder {
+       color: #fff;
+}
+
+.post-form-field:-moz-placeholder {
+       color: #fff;
+}
+
+.post-form-field::-moz-placeholder {
+       color: #fff;
+}
+
+.post-form-field:-ms-input-placeholder {
+       color: #fff;
 }
 
 .profile-form-field{
@@ -1400,7 +1770,7 @@ font-weight:300;
 }
 
 #playbook h2{
-font-family: "Garamond", "Times New Roman";
+font-family: "Helvetica Neue", Arial, Sans-Serif;
 font-size: 1.5em;
 }
 
@@ -1411,10 +1781,19 @@ font-size: 1.5em;
 }
 
 /*--Quick Looks Blog--*/
+#blog {
+    font-family: "Helvetica Neue", Arial, Sans-Serif;
+}
+
+.blog-header {
+    text-align: center;   
+}
+
 .blog-post{
   background-color: #ededed;
-  padding: 0 10px 10px 10px;
-  margin: 5px 0;
+  padding: 30px 15px 10px 15px;
+  margin: 2em 0;
+  line-height: 1.6;
 }
 #blog h2{
   margin: 0 auto;
@@ -1423,8 +1802,9 @@ font-size: 1.5em;
 }
 
 #blog h3{
-  font-family: "Helvetica","Arial";
-  font-size: 12px;
+  font-family: "Helvetica Neue", Arial, Sans-Serif;
+  font-size: 20px;
+  font-weight: 400;
   margin: 0 auto;
   padding-top:10px;
 }
@@ -1437,19 +1817,19 @@ ul.blog-post-list{
 }
 
 ul.blog-post-list li{
-  font-family: "Garamond";
-  font-size: 14px;
+  font-family: "Helvetica Neue", Arial, Sans-Serif;
+  font-size: 16px;
 }
 
 ul.blog-post-list-1 li{
-  font-family: "Garamond";
+  font-family: "Helvetica Neue", Arial, Sans-Serif;
   list-style-type: circle;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 /*--newsfeed */
 .newsfeed a{
-  font-family: "Helvetica";
+  font-family: "Helvetica Neue", Arial, Sans-Serif;
   color: #63b258;
   font-size:12px;
 }
@@ -1483,7 +1863,7 @@ ul.blog-post-list-1 li{
 }
 
 .company-name{
-  font-family: "Helvetica";
+  font-family: "Helvetica Neue", Arial, Sans-Serif;
   padding: 30px 0 15px 30px;
   color: #000;
   font-size: 20px;
@@ -1502,5 +1882,3 @@ ul.nf-job-info li{
   font-size: 12px;
 }
 /*-------------------*/
-
-
