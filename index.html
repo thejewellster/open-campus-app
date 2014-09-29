@@ -37,6 +37,13 @@
 <body>
 
 <section class="home">
+    <div class="video">
+        <video width="100%" height="100%" autoplay loop>
+            <source src="img/header-movie.mov" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+<div class="overlay">
 <div class="container-fluid">
     <nav class="navbar navbar-default" role="navigation">
       <div class="container-fluid">
@@ -44,7 +51,7 @@
           <div class="navbar-header">
           
             <button type="button" class="navbar-toggle">
-            <span class="mobile-icons"><a href="index.html"><img src="img/homeicon.png" width="20" alt=""></a></span></a></span>
+            <span class="mobile-icons"><a href="index.html"><img src="img/homeicon.png" width="20" alt=""></a></span>
             <span class="mobile-icons"><a href="app.html#/post"><img src="img/briefcasewhite.png" width="20" alt=""></a></span>
             <span class="mobile-icons"><a href="app.html#/login"><img src="img/white-grad-cap.png" width="30" alt=""></a></span>
           </button>
@@ -58,20 +65,31 @@
           <li><a href="index.html">HOME</a></li>
           <li><a href="blog.html">BLOG</a></li>
             <li><a href="/app.html#/post" class="navbar-login" style="border-right:0;"><img src="img/briefcasewhite.png" width="20" style="padding-right: 5px; padding-bottom:3px;" alt="">BUSINESSES</a></li>
-            <li><a href="/app.html#/login" class="navbar-login" style="border-right:0;"><img src="img/white-grad-cap.png" width="30" style="padding-right: 5px;"alt="">STUDENTS</a></li>
+            <li><a href="/app.html#/login" class="navbar-login" style="border-right:0;"><img src="img/white-grad-cap.png" width="30" style="padding-right: 5px;" alt="">STUDENTS</a></li>
             
           </ul>
 
         </div><!-- /.navbar-collapse -->
-
-
-        <iframe src="//player.vimeo.com/video/101333870?byline=0&title=0&portrait=0&badge=0&autoplay=1" class="vimeo-player" width="700" height="393" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        
       </div><!-- /.container-fluid -->
     </nav>
 </div>
+    <div class="container callout-header">
+        <div class="row home-buttons">
+        <dv class="col-sm-12">
+            <span class="headline">Graduate With A Resume</span>    
+        </dv>
+        <div class="col-sm-6">
+            <!--<span class="button-heading">Businesses</span>-->
+            <a href="/app.html#/post"><button class="post-a-job"><img src="img/briefcasewhite.png" width="30" style="padding-right: 5px; padding-bottom:3px; margin-right: .5em;" alt="">Post a Job</button></a>
+        </div>
+        <div class="col-sm-6">
+            <!--<span class="button-heading">Students</span>-->
+            <a href="/app.html#/login"><button class="find-a-job"><img src="img/white-grad-cap.png" width="40" style="padding-right: 5px; margin-right: .5em;"alt="">Find a Job</button></a>
+        </div>
+    </div>
+    </div>
+</div>
 </section>
-
 <div class="container">
 	<div class="row home-page-row">
 		<div class="col-xs-12">
@@ -122,6 +140,23 @@
 
 	
 </div>
+    
+
+    <div class="container">
+        <h1 class="job-pull-header">Here are some recent jobs that have been posted</h1>
+        <div class="row">
+	       <div class="col-sm-4 firstJob">
+		      
+	       </div>
+            <div class="col-sm-4 secondJob">
+		      
+	       </div>
+            <div class="col-sm-4 thirdJob">
+		      
+	       </div>
+        </div>
+    </div>
+
 
 <div class="container-fluid home-page-row" style="background-color:rgb(88, 179, 65); padding-bottom:100px;">
 	<div class="container">
@@ -257,7 +292,7 @@
 
 </script>
 
-<script>
+<script type="text/javascript">
     $(document).ready(function() {
         $(window).resize(function() {
         if ($(window).width() < 925) {
@@ -265,6 +300,61 @@
         }
         }).resize();
     });
+</script>
+    
+<script src="https://cdn.firebase.com/js/client/1.0.21/firebase.js"></script>
+<script type="text/javascript">
+
+    
+        var jobsRef = new Firebase("https://open-campus.firebaseio.com/jobs");
+        var jobsQuery = jobsRef.limit(3);
+        var jobName;
+        var jobDescription;
+        var jobLocation;
+        var jobCompensation;
+        var jobWebsite;
+        var count = 1;
+        
+        // Attach an asynchronous callback to read the data at our posts reference
+        jobsQuery.once('value', function (snapshot) {
+            snapshot.forEach(function(childSnapshot) {
+                jobName = childSnapshot.child('company').val();
+                jobDescription = childSnapshot.child('description').val();
+                jobCompensation = childSnapshot.child('compensation').val();
+                jobWebsite = childSnapshot.child('website').val();
+                jobLocation = childSnapshot.child('location').val();
+                
+                if (jobCompensation == null) {
+                        jobCompensation = "Inquire with application";   
+                }
+                
+                if (jobWebsite == null) {
+                    jobWebsite = "#";   
+                }
+                
+                if (count == 1) {
+                    $(".firstJob").html("<a class=\"job-site\" href=\"" + jobWebsite + "\"><h3>" + jobName + "</h3></a>" + "<p>Location: " + jobLocation + "</p>" + "<p>" + jobDescription + "</p>" + "<p>Compensation: " + jobCompensation + "</p>");
+                }
+                else if (count == 2) {
+                    $(".secondJob").html("<a class=\"job-site\" href=\"" + jobWebsite + "\"><h3>" + jobName + "</h3></a>" + "<p>Location: " + jobLocation + "</p>" + "<p>" + jobDescription + "</p>" + "<p>Compensation: " + jobCompensation + "</p>");
+                }
+                else if (count == 3) {
+                    $(".thirdJob").html("<a class=\"job-site\" href=\"" + jobWebsite + "\"><h3>" + jobName + "</h3></a>" + "<p>Location: " + jobLocation + "</p>" + "<p>" + jobDescription + "</p>" + "<p>Compensation: " + jobCompensation + "</p>");   
+                }
+                count++;
+            });
+            
+            $(".firstJob").append("<a href=\"http://opencampusjobs.com/app.html#/login\"><button class=\"job-pull-btn\">Apply</button></a>");
+            $(".secondJob").append("<a href=\"http://opencampusjobs.com/app.html#/login\"><button class=\"job-pull-btn\">Apply</button></a>");
+            $(".thirdJob").append("<a href=\"http://opencampusjobs.com/app.html#/login\"><button class=\"job-pull-btn\">Apply</button></a>");
+            
+            
+        });
+        
+        
+        
+    
+
 </script>
 
 
