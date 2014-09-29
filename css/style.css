@@ -852,9 +852,11 @@ width: 300px;
         
 }
 
+/*
 .ng-scope {
-    height: 100%;   
+   
 }
+*/
 
 span.difficulty-text {
     color: #fff;   
@@ -1085,10 +1087,12 @@ ul.sub-buttons li a:hover{
 }
 
 /*right hand job thumbnail for business*/
+/*
 #job {
     position: fixed;
     right: 1em;
 }
+*/
 
 /*fix the top buttons on the Post a Job Page*/
 .welcome-post-job {
@@ -1702,7 +1706,7 @@ input.post-form-field{
 .post-form-field{
   width: 100%;
   padding: 10px 10px 5px 10px;
-  color: #000;
+  color: #fff;
   background-color: rgba(255, 255, 255, 0.2);
   border: 0;
   border-bottom: 2px solid #000;
