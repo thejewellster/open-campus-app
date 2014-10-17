@@ -836,6 +836,7 @@ width: 300px;
     background-position: center top;
     background-size: cover;
     margin: -25px 0 0 0;
+    height: 100%;
     
         
 }
@@ -848,9 +849,16 @@ width: 300px;
     background-size: cover;
     margin: -25px 0 0 0;
     height: 100%;
-    
-        
 }
+
+.full-height-wrapper {
+     height: 100%;   
+}
+
+.login-student-form {
+    margin: 3em 0 0 0;
+}
+
 
 /*
 .ng-scope {
@@ -1703,29 +1711,38 @@ input[type=radio]:checked + .post-skill-btn h2{
 input.post-form-field{
 }
 
-.post-form-field{
+.post-form-field {
   width: 100%;
   padding: 10px 10px 5px 10px;
-  color: #fff;
-  background-color: rgba(255, 255, 255, 0.2);
+  color: #000;
+  background-color: #fff;
   border: 0;
   border-bottom: 2px solid #000;
   font-size: 12px;
 }
 
-.post-form-field::-webkit-input-placeholder {
+.post-form-field-business{
+  width: 100%;
+  padding: 10px 10px 5px 10px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.2);
+  border: 0;
+  font-size: 12px;
+}
+
+.post-form-field-business::-webkit-input-placeholder {
        color: #fff;
 }
 
-.post-form-field:-moz-placeholder {
+.post-form-field-business:-moz-placeholder {
        color: #fff;
 }
 
-.post-form-field::-moz-placeholder {
+.post-form-field-business::-moz-placeholder {
        color: #fff;
 }
 
-.post-form-field:-ms-input-placeholder {
+.post-form-field-business:-ms-input-placeholder {
        color: #fff;
 }
 
@@ -1891,5 +1908,13 @@ ul.nf-job-info li{
   font-size: 12px;
 }
 /*-------------------*/
+
+/*****Student profile filter page*******/
+
+@media screen and (min-width: 691px) {
+     .filter-item {
+          text-align: center;   
+     }
+}
 
 
